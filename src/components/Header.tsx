@@ -48,7 +48,7 @@ export default function Header() {
       justifyContent="space-between"
       alignItems="center"
       fontWeight="600"
-      bg={useColorModeValue("theme.100", "theme.500")}
+    //   bg={useColorModeValue("theme.100", "theme.500")}
     >
       <NextLink href="/" passHref>
         <Heading

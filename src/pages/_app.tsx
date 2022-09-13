@@ -4,20 +4,22 @@ import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import Script from "next/script";
 import { useRouter } from "next/router";
+import theme from "../theme/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
-    const handleStart = (url:any) => {
+    const handleStart = (url: any) => {
       if (window.Tawk_API) {
         Tawk_API.hideWidget();
       }
       return url !== router.asPath && setLoading(true);
     };
-    const handleComplete = (url:any) => {
+    const handleComplete = (url: any) => {
       // return url === router.asPath && setLoading(false);
       Tawk_API.showWidget();
-      // setLoading(false);
+      setLoading(false);
     };
     router.events.on("routeChangeStart", handleStart);
     router.events.on("routeChangeComplete", handleComplete);
@@ -29,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events, router.asPath]);
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme} resetCSS>
       <Component {...pageProps} />
       <Script id="tawk" strategy="lazyOnload">
         {`

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import Layout from "../layouts";
 import styles from "../styles/Home.module.css";
 
 const About: NextPage = () => {
@@ -14,10 +14,12 @@ const About: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+<Layout>
       <main className={styles.main}>
     
       </main>
+</Layout>
+    
 
      
     </div>
