@@ -1,9 +1,33 @@
+import { useEffect, useState } from "react";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import Script from "next/script";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  useEffect(() => {
+    const handleStart = (url:any) => {
+      if (window.Tawk_API) {
+        Tawk_API.hideWidget();
+      }
+      return url !== router.asPath && setLoading(true);
+    };
+    const handleComplete = (url:any) => {
+      // return url === router.asPath && setLoading(false);
+      Tawk_API.showWidget();
+      // setLoading(false);
+    };
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleComplete);
+      router.events.off("routeChangeError", handleComplete);
+    };
+  }, [router.events, router.asPath]);
   return (
     <ChakraProvider>
       <Component {...pageProps} />

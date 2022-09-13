@@ -38,6 +38,10 @@ export default function Header() {
   return (
     <Flex
     //   maxW="1324px"
+    position="fixed"
+    top="0"
+    zIndex="50"
+    width="90%"
       m="0 auto"
       minH={"6rem"}
       h={["4rem", "4rem", "4rem"]}

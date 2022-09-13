@@ -12,10 +12,10 @@ import {
 
 const Intro = () => {
   return (
-    <Box maxW="1324px" m="0 auto">
+    <Box maxW="1324px" m="0 auto" mt="5rem">
       <Box>
         <Flex justifyContent="space-between">
-          <Box mt="3rem">
+          <Box mt="1rem">
             <Text mb="2rem">Hello World</Text>
 
             <Typewriter
@@ -30,10 +30,8 @@ const Intro = () => {
                 loop: true,
               }}
             />
-            <Text mt="2rem">
-              I build web experience <br /> and awesome web app, i solve variant
-              web <br />
-              problem and also write code to make things works
+            <Text mt="2rem" fontSize="2.5rem" fontWeight="bold">
+              I build web experience <br /> and awesome web applications
             </Text>
             <Button
               rounded="md"
@@ -41,6 +39,7 @@ const Intro = () => {
               fontSize=".8rem"
               letterSpacing={2}
               mt="2rem"
+              p="1.5rem 2rem"
               rightIcon={<UilArrowRight />}
               _hover={{
                 bg: "#61DAFB",
@@ -54,13 +53,14 @@ const Intro = () => {
             >
               About Me
             </Button>
-            <Flex mt="2rem">
+            <Flex mt="4rem">
               <Link
                 href="https://www.linkedin.com/in/curtis-oyakoya-b70b091b2/"
                 isExternal
                 _hover={{
                   textDecor: "none",
                 }}
+                mr="2rem"
               >
                 <UilLinkedin size="60" color="#61DAFB" />
               </Link>
@@ -70,6 +70,7 @@ const Intro = () => {
                 _hover={{
                   textDecor: "none",
                 }}
+                mr="2rem"
               >
                 <UilGithub size="60" color="#61DAFB" />
               </Link>
@@ -84,12 +85,16 @@ const Intro = () => {
               </Link>
             </Flex>
           </Box>
-          <Image
-            borderRadius="md"
-            width="24%"
-            src="/CurtisDev.jpeg"
-            alt="Curtis"
-          />
+          <Box width="27%" display={["none", "none", "none", "block"]}>
+            <Image
+              borderRadius="lg"
+              width="100%"
+              height="100%"
+              objectFit="cover"
+              src="/CurtisDev.jpeg"
+              alt="Curtis"
+            />
+          </Box>
         </Flex>
       </Box>
     </Box>
