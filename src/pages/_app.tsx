@@ -5,6 +5,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import theme from "../theme/theme";
+import AnimatedCursor from "react-animated-cursor"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme} resetCSS>
       <Component {...pageProps} />
+      <AnimatedCursor/>
       <Script id="tawk" strategy="lazyOnload">
         {`
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

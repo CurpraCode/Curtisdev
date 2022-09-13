@@ -83,7 +83,7 @@ export default function Header() {
             <NextLink href={to} passHref key={index}>
               <Link
                 fontSize="1rem"
-                fontWeight={400}
+                fontWeight={600}
                 px={["2rem", "4rem", "5rem", "1rem"]}
                 // py=".8rem"
                 _hover={{
