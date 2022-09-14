@@ -12,7 +12,7 @@ import {
 
 const Intro = () => {
   return (
-    <Box  mt="5rem"   p="2rem 3rem">
+    <Box mt="2rem" p="1rem 2rem">
       <Box>
         <Flex justifyContent="space-between">
           <Box mt="1rem">
@@ -32,7 +32,7 @@ const Intro = () => {
             />
             <Text
               mt="2rem"
-              fontSize={["0.9rem", "1.5rem", "2.5rem", "2.5rem"]}
+              fontSize={["1.2rem", "1.5rem", "2.5rem", "2.5rem"]}
               fontWeight="bold"
             >
               I build web experience <br /> and awesome web applications

@@ -41,10 +41,8 @@ export default function Header() {
     top="0"
     zIndex="50"
     width="95%"
-    //   m="0 auto"
-      p="2rem 3rem"
+      p="2rem 2rem"
       minH={"6rem"}
-    //   h={["4rem", "4rem", "4rem"]}
       justifyContent="space-between"
       alignItems="center"
       fontWeight="600"
