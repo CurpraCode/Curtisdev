@@ -17,13 +17,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const handleStart = (url: any) => {
       if (window.Tawk_API) {
-        Tawk_API.hideWidget();
+        window.Tawk_API.hideWidget();
       }
       return url !== router.asPath && setLoading(true);
     };
     const handleComplete = (url: any) => {
       // return url === router.asPath && setLoading(false);
-      Tawk_API.showWidget();
+      window.Tawk_API.showWidget();
       setLoading(false);
     };
     router.events.on("routeChangeStart", handleStart);
