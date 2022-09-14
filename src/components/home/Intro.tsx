@@ -12,7 +12,7 @@ import {
 
 const Intro = () => {
   return (
-    <Box maxW="1324px" m="0 auto" mt="5rem">
+    <Box  mt="5rem"   p="2rem 3rem">
       <Box>
         <Flex justifyContent="space-between">
           <Box mt="1rem">
@@ -32,31 +32,34 @@ const Intro = () => {
             />
             <Text
               mt="2rem"
-              fontSize={["0.9rem", "1.8rem", "0.9rem", "2.5rem"]}
+              fontSize={["0.9rem", "1.5rem", "2.5rem", "2.5rem"]}
               fontWeight="bold"
             >
               I build web experience <br /> and awesome web applications
             </Text>
-            <Button
-              rounded="md"
-              bg="#61DAFB"
-              fontSize=".8rem"
-              letterSpacing={2}
-              mt="2rem"
-              p="1.5rem 2rem"
-              rightIcon={<UilArrowRight />}
-              _hover={{
-                bg: "#61DAFB",
-              }}
-              _active={{
-                bg: "#61DAFB",
-              }}
-              _focus={{
-                bg: "#61DAFB",
-              }}
-            >
-              About Me
-            </Button>
+            <NextLink href="/about" passHref>
+              <Button
+                rounded="md"
+                bg="#61DAFB"
+                fontSize=".8rem"
+                letterSpacing={2}
+                mt="2rem"
+                p="1.5rem 2rem"
+                rightIcon={<UilArrowRight />}
+                _hover={{
+                  bg: "#61DAFB",
+                }}
+                _active={{
+                  bg: "#61DAFB",
+                }}
+                _focus={{
+                  bg: "#61DAFB",
+                }}
+              >
+                About Me
+              </Button>
+            </NextLink>
+
             <Flex mt="4rem">
               <Link
                 href="https://www.linkedin.com/in/curtis-oyakoya-b70b091b2/"

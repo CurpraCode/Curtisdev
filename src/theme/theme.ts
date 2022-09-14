@@ -15,7 +15,7 @@ const colors = {
     400: "#84a1ff",
     300: "#ff5403",
     200: "#ee2761",
-    100: "#ffffff",
+    100: "#F6FAFF",
   },
 };
 // 3. extend the theme

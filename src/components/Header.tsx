@@ -31,20 +31,20 @@ export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { pathname } = useRouter();
 
-  const colorSelect = colorMode === "dark" ? "theme.100" : "theme.500";
+  const colorSelect = colorMode === "dark" ? "theme.100" : "theme.400";
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef<HTMLDivElement | null>(null);
   const [isTab] = useMediaQuery("(max-width: 991px)");
   return (
     <Flex
-    //   maxW="1324px"
     position="fixed"
     top="0"
     zIndex="50"
-    width="90%"
-      m="0 auto"
+    width="95%"
+    //   m="0 auto"
+      p="2rem 3rem"
       minH={"6rem"}
-      h={["4rem", "4rem", "4rem"]}
+    //   h={["4rem", "4rem", "4rem"]}
       justifyContent="space-between"
       alignItems="center"
       fontWeight="600"
@@ -58,7 +58,7 @@ export default function Header() {
             color: "theme.300",
           }}
           fontSize={["1rem", "1.2rem"]}
-          ml={["1rem", "1rem", "1rem", "3rem"]}
+        //   ml={["1rem", "1rem", "1rem", "3rem"]}
           w="50%"
           as={Link}
           textDecor={"none"}
