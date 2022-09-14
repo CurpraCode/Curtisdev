@@ -30,7 +30,11 @@ const Intro = () => {
                 loop: true,
               }}
             />
-            <Text mt="2rem" fontSize="2.5rem" fontWeight="bold">
+            <Text
+              mt="2rem"
+              fontSize={["0.9rem", "1.8rem", "0.9rem", "2.5rem"]}
+              fontWeight="bold"
+            >
               I build web experience <br /> and awesome web applications
             </Text>
             <Button

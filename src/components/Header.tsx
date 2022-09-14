@@ -188,7 +188,7 @@ export default function Header() {
               <DrawerContent>
                 <DrawerCloseButton mt="2rem" />
                 <DrawerBody
-                  bg={colorMode === "dark" ? "theme.500" : "theme.100"}
+                //   bg={colorMode === "dark" ? "theme.500" : "theme.100"}
                 >
                   <Flex direction={"column"} align="center" gap={9} mt={"6rem"}>
                     {links.map(({ name, to }, index) => (

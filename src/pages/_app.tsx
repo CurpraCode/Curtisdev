@@ -10,6 +10,7 @@ import dynamic from "next/dynamic";
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);

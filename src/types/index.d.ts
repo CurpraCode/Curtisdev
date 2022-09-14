@@ -6,3 +6,6 @@ declare global {
     gtag: (...args: any[]) => void;
   }
 }
+
+declare module "@iconscout/react-unicons";
+declare module "react-animated-cursor";
