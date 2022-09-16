@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Box, Text, Link, Image, Button } from "@chakra-ui/react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import NextLink from "next/link";
 import Typewriter from "typewriter-effect";
 import {
@@ -12,7 +12,10 @@ import {
 
 const Intro = () => {
   return (
-    <Box mt="2rem" p={["0.1rem 0.3rem","0.3rem 0.5rem","1rem 2rem","1rem 2rem"]}>
+    <Box
+      mt="1rem"
+      p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}
+    >
       <Box>
         <Flex justifyContent="space-between">
           <Box mt="1rem">

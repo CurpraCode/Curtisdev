@@ -55,9 +55,9 @@ export default function Header() {
             textDecor: "none",
             color: "theme.300",
           }}
-          fontSize={["1rem", "1.2rem"]}
-          //   ml={["1rem", "1rem", "1rem", "3rem"]}
-          w="50%"
+          fontSize="1rem"
+          letterSpacing="0.2rem"
+          // w="50%"
           as={Link}
           textDecor={"none"}
         >
