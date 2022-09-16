@@ -6,6 +6,7 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import theme from "../theme/theme";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -37,6 +38,34 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events, router.asPath]);
   return (
     <ChakraProvider theme={theme} resetCSS>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <meta
+          name="description"
+          content="Portfolio of a software engineer, curpra code developer.... code it, debug it."
+        />
+        <meta name="keywords" content="Keywords" />
+        <title>Canvey App || Enterprise</title>
+
+        <link rel="manifest" href="/manifest.json" />
+        <link
+          href="/icon-192x192.png"
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+        />
+        <link
+          href="/icon-192x192.png"
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+        />
+        <link rel="apple-touch-icon" href="/icon-192x192.png"></link>
+      </Head>
       <Component {...pageProps} />
       <AnimatedCursor />
       <Script id="tawk" strategy="lazyOnload">

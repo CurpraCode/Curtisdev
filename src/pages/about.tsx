@@ -12,7 +12,7 @@ const About: NextPage = () => {
           name="description"
           content="Portfolio of a software engineer, curpra code developer.... code it, debug it."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon-192x192.png" />
       </Head>
       <Layout>
         <main className={styles.main}></main>
