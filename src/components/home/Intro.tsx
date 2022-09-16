@@ -32,7 +32,7 @@ const Intro = () => {
             />
             <Text
               mt="2rem"
-              fontSize={["1.2rem", "1.5rem", "2.5rem", "2.5rem"]}
+              fontSize={["1.2rem", "1.8rem", "2.5rem", "2.5rem"]}
               fontWeight="bold"
             >
               I build web experience <br /> and awesome web applications

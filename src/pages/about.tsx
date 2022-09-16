@@ -14,14 +14,9 @@ const About: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-<Layout>
-      <main className={styles.main}>
-    
-      </main>
-</Layout>
-    
-
-     
+      <Layout>
+        <main className={styles.main}></main>
+      </Layout>
     </div>
   );
 };
