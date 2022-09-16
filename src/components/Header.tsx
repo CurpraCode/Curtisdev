@@ -37,16 +37,16 @@ export default function Header() {
   const [isTab] = useMediaQuery("(max-width: 991px)");
   return (
     <Flex
-    position="fixed"
-    top="0"
-    zIndex="50"
-    width="95%"
-      p="2rem 2rem"
+      position="fixed"
+      top="0"
+      zIndex="50"
+      width="95%"
+      p={["0.1rem 0.3rem","0.3rem 0.5rem","2rem 2rem","2rem 2rem"]}
       minH={"6rem"}
       justifyContent="space-between"
       alignItems="center"
       fontWeight="600"
-    //   bg={useColorModeValue("theme.100", "theme.500")}
+      //   bg={useColorModeValue("theme.100", "theme.500")}
     >
       <NextLink href="/" passHref>
         <Heading
@@ -56,7 +56,7 @@ export default function Header() {
             color: "theme.300",
           }}
           fontSize={["1rem", "1.2rem"]}
-        //   ml={["1rem", "1rem", "1rem", "3rem"]}
+          //   ml={["1rem", "1rem", "1rem", "3rem"]}
           w="50%"
           as={Link}
           textDecor={"none"}

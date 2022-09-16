@@ -12,7 +12,7 @@ import {
 
 const Intro = () => {
   return (
-    <Box mt="2rem" p="1rem 2rem">
+    <Box mt="2rem" p={["0.1rem 0.3rem","0.3rem 0.5rem","1rem 2rem","1rem 2rem"]}>
       <Box>
         <Flex justifyContent="space-between">
           <Box mt="1rem">
@@ -60,7 +60,7 @@ const Intro = () => {
               </Button>
             </NextLink>
 
-            <Flex mt="4rem">
+            <Flex mt="5rem">
               <Link
                 href="https://www.linkedin.com/in/curtis-oyakoya-b70b091b2/"
                 isExternal
