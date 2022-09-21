@@ -1,14 +1,63 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
-import  sgMail from "@sendgrid/mail"
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import sgMail, { MailDataRequired } from "@sendgrid/mail";
+type ReqData = {
+  to?: string;
+  from?: string;
+  subject?: string;
+  text?: string;
+  html?: string;
+};
 type Data = {
-  name: string
-}
-
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'John Doe' })
-}
+  errorMessage: string;
+  successMessage: string;
+};
+const sendEmail = async (options: any) => {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY || "");
+  const msg: MailDataRequired  = {
+    to: process.env.EMAIL_TO,
+    from: process.env.EMAIL_FROM || "",
+    subject: options.subject,
+    text: options.text,
+    html: options.html,
+  };
+  await sgMail.send(msg);
+};
+const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+  const { name, email, subject, message } = req.body;
+  const text = `${message}`;
+  const html = `       
+  <body>
+      <div>
+          <h2>
+              ${name}
+          </h2>
+          <a class="email" href="mailto:${email}" target="_blank"
+          style="text-decoration: none">
+              ${email}
+          </a>
+          <p class="message">
+             ${message}
+          </p>
+      </div>
+  </body>
+  `;
+  try {
+    await sendEmail({
+      subject,
+      text,
+      html,
+    });
+    res.status(200).json({
+      successMessage: "John Doe",
+      errorMessage: "",
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({
+      errorMessage: "Error sending mail",
+      successMessage: "",
+    });
+  }
+};
+export default handler
