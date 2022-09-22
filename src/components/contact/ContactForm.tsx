@@ -10,11 +10,12 @@ import {
   Spinner,
   useColorModeValue,
   useColorMode,
-  Center,
+  Text,
 } from "@chakra-ui/react";
 import { useMail } from "../../hooks/useMail";
 import { useForm } from "react-hook-form";
 import { Imail } from "../../interface/mail.interface";
+import { UilMessage } from "@iconscout/react-unicons";
 
 const ContactForm = () => {
   const { loading, sendEmail } = useMail();
@@ -30,11 +31,6 @@ const ContactForm = () => {
   };
   return (
     <Box>
-      <Center mb="1rem">
-        <Heading color={useColorModeValue("theme.500", "theme.100")}>
-          {"I'd love to hear from you!"}
-        </Heading>
-      </Center>
       <Flex
         align="center"
         justify="space-between"
@@ -48,7 +44,7 @@ const ContactForm = () => {
         color={useColorModeValue("theme.500", "theme.100")}
         w="100%"
       >
-        <Box d="flex" flexDir="column" w="100%" mb="1rem">
+        <Box display="flex" flexDir="column" w="100%" mb="1rem">
           <Heading
             fontWeight={600}
             fontSize={{ base: "1.4rem", md: "2rem", lg: "3rem" }}
@@ -58,86 +54,86 @@ const ContactForm = () => {
           </Heading>
           <Box as="form" onSubmit={handleSubmit(handleMail)} w="100%">
             <Box py=".6rem">
-              
-                <Input
-                  fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
-                  id="name"
-                  type="text"
-                  placeholder="Enter your name"
-                  _focus={{
-                    borderColor: "theme.300",
-                    borderWidth: ".15rem",
-                  }}
-                  _placeholder={{
-                    color: colorMode === "light" ? "theme.500" : "theme.100",
-                  }}
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  bg={colorMode === "light" ? "theme.100" : "theme.500"}
-                />
-            
+              <Input
+                fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
+                id="name"
+                type="text"
+                placeholder="Enter your name"
+                _focus={{
+                  borderColor: "theme.300",
+                  borderWidth: ".15rem",
+                }}
+                _placeholder={{
+                  color: colorMode === "light" ? "theme.500" : "theme.100",
+                }}
+                {...(register("name"), { required: true })}
+                bg={colorMode === "light" ? "theme.100" : "theme.500"}
+              />
+              <Text color="red" fontSize="0.6rem">
+                {errors.name && "Name is required"}
+              </Text>
             </Box>
 
             <Box py=".6rem">
-            
-                <Input
-                  fontSize={["1.1rem", "1.1rem", "1.3rem", "1.3rem"]}
-                  id="email"
-                  type="email"
-                  placeholder="Enter your email"
-                  _focus={{
-                    borderColor: "theme.300",
-                    borderWidth: ".15rem",
-                  }}
-                  _placeholder={{
-                    color: colorMode === "light" ? "theme.500" : "theme.100",
-                  }}
-                  bg={colorMode === "light" ? "theme.100" : "theme.500"}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-             
+              <Input
+                fontSize={["1.1rem", "1.1rem", "1.3rem", "1.3rem"]}
+                id="email"
+                type="email"
+                placeholder="Enter your email"
+                _focus={{
+                  borderColor: "theme.300",
+                  borderWidth: ".15rem",
+                }}
+                _placeholder={{
+                  color: colorMode === "light" ? "theme.500" : "theme.100",
+                }}
+                bg={colorMode === "light" ? "theme.100" : "theme.500"}
+                {...(register("email"), { required: true })}
+              />
+               <Text color="red" fontSize="0.6rem">
+                {errors.email && "Email is required"}
+              </Text>
             </Box>
 
             <Box py=".6rem">
-             
-                <Input
-                  bg={colorMode === "light" ? "theme.100" : "theme.500"}
-                  fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
-                  id="subject"
-                  type="text"
-                  placeholder="Enter Subject"
-                  _focus={{
-                    borderColor: "theme.300",
-                    borderWidth: ".15rem",
-                  }}
-                  _placeholder={{
-                    color: colorMode === "light" ? "theme.500" : "theme.100",
-                  }}
-                  value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
-                />
-           
+              <Input
+                bg={colorMode === "light" ? "theme.100" : "theme.500"}
+                fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
+                id="subject"
+                type="text"
+                placeholder="Enter Subject"
+                _focus={{
+                  borderColor: "theme.300",
+                  borderWidth: ".15rem",
+                }}
+                _placeholder={{
+                  color: colorMode === "light" ? "theme.500" : "theme.100",
+                }}
+                {...(register("subject"), { required: true })}
+              />
+               <Text color="red" fontSize="0.6rem">
+                {errors.subject && "Subject is required"}
+              </Text>
             </Box>
 
             <Box py=".6rem">
-            
-                <Textarea
-                  bg={colorMode === "light" ? "theme.100" : "theme.500"}
-                  fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
-                  mt="1rem"
-                  focusBorderColor="theme.300"
-                  placeholder="Enter your message"
-                  _placeholder={{
-                    color: colorMode === "light" ? "theme.500" : "theme.100",
-                  }}
-                  size="md"
-                  resize={"vertical"}
-                  isRequired
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-             
+              <Textarea
+                bg={colorMode === "light" ? "theme.100" : "theme.500"}
+                fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
+                mt="1rem"
+                focusBorderColor="theme.300"
+                placeholder="Enter your message"
+                _placeholder={{
+                  color: colorMode === "light" ? "theme.500" : "theme.100",
+                }}
+                size="md"
+                resize={"vertical"}
+                isRequired
+                {...(register("message"), { required: true })}
+              />
+               <Text color="red" fontSize="0.6rem">
+                {errors.message && "Message is required"}
+              </Text>
             </Box>
 
             <Button
@@ -149,7 +145,7 @@ const ContactForm = () => {
               _hover={{
                 bg: "theme.300",
               }}
-            //   rightIcon={<FiSend />}
+              rightIcon={<UilMessage />}
               type="submit"
               _focus={{
                 borderColor: "theme.300",
@@ -172,7 +168,7 @@ const ContactForm = () => {
             </Button>
           </Box>
         </Box>
-        <Box d={"block"} w="100%">
+        <Box display="block" w="100%">
           <Image
             src={send_email}
             layout="responsive"
