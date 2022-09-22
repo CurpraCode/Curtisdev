@@ -15,12 +15,14 @@
     "@emotion/styled": "^11.10.4",
     "@iconscout/react-unicons": "^1.1.6",
     "@sendgrid/mail": "^7.7.0",
+    "axios": "^0.27.2",
     "framer-motion": "^7.3.2",
     "next": "12.3.0",
     "next-pwa": "^5.6.0",
     "react": "18.2.0",
     "react-animated-cursor": "^2.5.1",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.36.0",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
