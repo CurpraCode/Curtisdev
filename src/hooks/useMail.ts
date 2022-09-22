@@ -9,7 +9,7 @@ export const useMail = () => {
       setLoading(true);
       let res = await axios({
         method: "POST",
-        url: "/api/mail",
+        url: "/api/sendMail",
         data: payload,
       });
       cogoToast.success(`${res.data.success}`);
