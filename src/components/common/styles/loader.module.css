@@ -14,16 +14,85 @@
 	animation: animate 16s linear infinite;
 }
 
-.loader span{
+.loader #t1{
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	display: block;
-	transform: rotate(calc(45deg * var(--i)));
+	transform: rotate(calc(45deg * 1));
 }
 
+.loader #t2{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	transform: rotate(calc(45deg * 2));
+}
+
+.loader #t3{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	transform: rotate(calc(45deg * 3));
+}
+
+.loader #t4{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	transform: rotate(calc(45deg * 4));
+}
+
+.loader #t5{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	transform: rotate(calc(45deg * 5));
+}
+
+.loader #t6{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	transform: rotate(calc(45deg * 6));
+}
+
+.loader #t7{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	transform: rotate(calc(45deg * 7));
+}
+
+.loader #t8{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	transform: rotate(calc(45deg * 8));
+}
 .loader span::before {
 	content: '';
 	position: absolute;
@@ -33,12 +102,29 @@
 	height: 40px;
 	background: linear-gradient(45deg, #c7eeff, #03a9f4);
 	border-radius: 50%;
-	box-shadow: 0 0 30px #00bc4d;
+	box-shadow: 0 0 30px #068aef;
 }
 
-.rotate{
+.rotate0{
 	animation: animate 4s ease-in-out infinite;
-	animation-delay: calc(-0.3s * var(--j));
+	animation-delay: calc(-0.3s * 0);
+}
+
+.rotate1{
+	animation: animate 4s ease-in-out infinite;
+	animation-delay: calc(-0.3s * 1);
+}
+.rotate2{
+	animation: animate 4s ease-in-out infinite;
+	animation-delay: calc(-0.3s * 2);
+}
+.rotate3{
+	animation: animate 4s ease-in-out infinite;
+	animation-delay: calc(-0.3s * 3);
+}
+.rotate4{
+	animation: animate 4s ease-in-out infinite;
+	animation-delay: calc(-0.3s * 4);
 }
 
 @keyframes animate {

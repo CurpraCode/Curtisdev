@@ -4,7 +4,7 @@ import cogoToast from "cogo-toast";
 
 export const useMail = () => {
   const [loading, setLoading] = useState<boolean>();
-  const sendEmail = async (payload: any) => {
+  const sendEmailer = async (payload: any) => {
     try {
       setLoading(true);
       let res = await axios({
@@ -12,6 +12,7 @@ export const useMail = () => {
         url: "/api/sendMail",
         data: payload,
       });
+      console.log(res)
       cogoToast.success(`${res.data.success}`);
     } catch (error: any) {
       console.log(error);
@@ -25,6 +26,6 @@ export const useMail = () => {
   };
   return {
     loading,
-    sendEmail,
+    sendEmailer,
   };
 };

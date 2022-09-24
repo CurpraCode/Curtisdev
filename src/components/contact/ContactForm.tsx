@@ -18,7 +18,7 @@ import { Imail } from "../../interface/mail.interface";
 import { UilMessage } from "@iconscout/react-unicons";
 
 const ContactForm = () => {
-  const { loading, sendEmail } = useMail();
+  const { loading, sendEmailer } = useMail();
   const { colorMode } = useColorMode();
   const {
     register,
@@ -26,8 +26,10 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<Imail>();
 
-  const handleMail = async (data) => {
-    await sendEmail(data);
+  const handleMail = async (data: any) => {
+    console.log(data);
+    const res = await sendEmailer(data);
+    console.log(res);
   };
   return (
     <Box>
@@ -56,7 +58,7 @@ const ContactForm = () => {
             <Box py=".6rem">
               <Input
                 fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
-                id="name"
+               
                 type="text"
                 placeholder="Enter your name"
                 _focus={{
@@ -77,7 +79,7 @@ const ContactForm = () => {
             <Box py=".6rem">
               <Input
                 fontSize={["1.1rem", "1.1rem", "1.3rem", "1.3rem"]}
-                id="email"
+                
                 type="email"
                 placeholder="Enter your email"
                 _focus={{
@@ -90,7 +92,7 @@ const ContactForm = () => {
                 bg={colorMode === "light" ? "theme.100" : "theme.500"}
                 {...(register("email"), { required: true })}
               />
-               <Text color="red" fontSize="0.6rem">
+              <Text color="red" fontSize="0.6rem">
                 {errors.email && "Email is required"}
               </Text>
             </Box>
@@ -99,7 +101,7 @@ const ContactForm = () => {
               <Input
                 bg={colorMode === "light" ? "theme.100" : "theme.500"}
                 fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
-                id="subject"
+               
                 type="text"
                 placeholder="Enter Subject"
                 _focus={{
@@ -111,7 +113,7 @@ const ContactForm = () => {
                 }}
                 {...(register("subject"), { required: true })}
               />
-               <Text color="red" fontSize="0.6rem">
+              <Text color="red" fontSize="0.6rem">
                 {errors.subject && "Subject is required"}
               </Text>
             </Box>
@@ -131,7 +133,7 @@ const ContactForm = () => {
                 isRequired
                 {...(register("message"), { required: true })}
               />
-               <Text color="red" fontSize="0.6rem">
+              <Text color="red" fontSize="0.6rem">
                 {errors.message && "Message is required"}
               </Text>
             </Box>
@@ -169,14 +171,14 @@ const ContactForm = () => {
           </Box>
         </Box>
         <Box display="block" w="100%">
-          <Image
+          {/* <Image
             src={send_email}
             layout="responsive"
             alt="Contact us page"
             width={"100%"}
             height="100%"
             as={ChakraImage}
-          />
+          /> */}
         </Box>
       </Flex>
     </Box>

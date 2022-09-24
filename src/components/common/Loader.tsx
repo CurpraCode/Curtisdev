@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/loader.module.css"
+import styles from "./styles/loader.module.css";
 
 const Loader = () => {
   return (
@@ -18,19 +18,19 @@ const Loader = () => {
           </filter>
         </svg>
         <div className={styles.loader}>
-          <span style="--i:1;"></span>
-          <span style="--i:2;"></span>
-          <span style="--i:3;"></span>
-          <span style="--i:4;"></span>
-          <span style="--i:5;"></span>
-          <span style="--i:6;"></span>
-          <span style="--i:7;"></span>
-          <span style="--i:8;"></span>
-          <span className={styles.rotate} style="--j:0;"></span>
-          <span className={styles.rotate} style="--j:1;"></span>
-          <span className={styles.rotate} style="--j:2;"></span>
-          <span className={styles.rotate} style="--j:3;"></span>
-          <span className={styles.rotate} style="--j:4;"></span>
+          <span id="t1"></span>
+          <span id="t2"></span>
+          <span id="t3"></span>
+          <span id="t4"></span>
+          <span id="t5"></span>
+          <span id="t6"></span>
+          <span id="t7"></span>
+          <span id="t8"></span>
+          <span className={styles.rotate0}></span>
+          <span className={styles.rotate1}></span>
+          <span className={styles.rotate2}></span>
+          <span className={styles.rotate3}></span>
+          <span className={styles.rotate4}></span>
         </div>
       </section>
     </div>
