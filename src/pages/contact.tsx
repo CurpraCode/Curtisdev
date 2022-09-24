@@ -9,7 +9,7 @@ const ContactForm = dynamic(()=> import("../components/contact/ContactForm"),{
     suspense:true,
     ssr:true
 })
-const contact = () => {
+const contact:NextPage = () => {
   return (
     <div className={styles.container}>
       <Layout>
