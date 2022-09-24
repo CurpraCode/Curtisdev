@@ -6,6 +6,7 @@ export const useMail = () => {
   const [loading, setLoading] = useState<boolean>();
   const sendEmailer = async (payload: any) => {
     try {
+        console.log(payload)
       setLoading(true);
       let res = await axios({
         method: "POST",
@@ -18,7 +19,7 @@ export const useMail = () => {
       console.log(error);
       let errorResponse = !!error.response.errorMessage
         ? error.response.errorMessage
-        : "Check your internet connection";
+        : "Something went wrong";
       cogoToast.error(`${errorResponse}`);
     } finally {
       setLoading(false);

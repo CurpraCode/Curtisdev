@@ -58,7 +58,6 @@ const ContactForm = () => {
             <Box py=".6rem">
               <Input
                 fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
-               
                 type="text"
                 placeholder="Enter your name"
                 _focus={{
@@ -68,7 +67,7 @@ const ContactForm = () => {
                 _placeholder={{
                   color: colorMode === "light" ? "theme.500" : "theme.100",
                 }}
-                {...(register("name"), { required: true })}
+                {...register("name", { required: true })}
                 bg={colorMode === "light" ? "theme.100" : "theme.500"}
               />
               <Text color="red" fontSize="0.6rem">
@@ -79,7 +78,6 @@ const ContactForm = () => {
             <Box py=".6rem">
               <Input
                 fontSize={["1.1rem", "1.1rem", "1.3rem", "1.3rem"]}
-                
                 type="email"
                 placeholder="Enter your email"
                 _focus={{
@@ -90,7 +88,7 @@ const ContactForm = () => {
                   color: colorMode === "light" ? "theme.500" : "theme.100",
                 }}
                 bg={colorMode === "light" ? "theme.100" : "theme.500"}
-                {...(register("email"), { required: true })}
+                {...register("email", { required: true })}
               />
               <Text color="red" fontSize="0.6rem">
                 {errors.email && "Email is required"}
@@ -101,7 +99,6 @@ const ContactForm = () => {
               <Input
                 bg={colorMode === "light" ? "theme.100" : "theme.500"}
                 fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
-               
                 type="text"
                 placeholder="Enter Subject"
                 _focus={{
@@ -111,7 +108,7 @@ const ContactForm = () => {
                 _placeholder={{
                   color: colorMode === "light" ? "theme.500" : "theme.100",
                 }}
-                {...(register("subject"), { required: true })}
+                {...register("subject", { required: true })}
               />
               <Text color="red" fontSize="0.6rem">
                 {errors.subject && "Subject is required"}
@@ -130,8 +127,8 @@ const ContactForm = () => {
                 }}
                 size="md"
                 resize={"vertical"}
-                isRequired
-                {...(register("message"), { required: true })}
+               
+                {...register("message", { required: true })}
               />
               <Text color="red" fontSize="0.6rem">
                 {errors.message && "Message is required"}

@@ -23,8 +23,10 @@ const sendEmail = async (options: any) => {
   };
   await sgMail.send(msg);
 };
-const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, subject, message } = req.body;
+  const dataVal =req.body
+  console.log(dataVal);
   const text = `${message}`;
   const html = `       
   <body>
@@ -43,20 +45,16 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   </body>
   `;
   try {
-    await sendEmail({
-      subject,
-      text,
-      html,
-    });
+    await sendEmail(req.body);
     res.status(200).json({
       successMessage: "John Doe",
-      errorMessage: "",
+      
     });
   } catch (err) {
     console.log(err);
     res.status(500).json({
       errorMessage: "Error sending mail",
-      successMessage: "",
+   
     });
   }
 };
