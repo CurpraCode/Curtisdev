@@ -14,7 +14,7 @@ type Data = {
 };
 const sendEmail = async (options: any) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY || "");
-  const msg: MailDataRequired  = {
+  const msg: MailDataRequired = {
     to: process.env.EMAIL_TO,
     from: process.env.EMAIL_FROM || "",
     subject: options.subject,
@@ -23,9 +23,15 @@ const sendEmail = async (options: any) => {
   };
   await sgMail.send(msg);
 };
+
+console.log(
+  process.env.SENDGRID_API_KEY,
+  process.env.EMAIL_TO,
+  process.env.EMAIL_FROM
+);
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, subject, message } = req.body;
-  const dataVal =req.body
+  const dataVal = req.body;
   console.log(dataVal);
   const text = `${message}`;
   const html = `       
@@ -46,16 +52,15 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   `;
   try {
     await sendEmail(req.body);
+    console.log(req.body);
     res.status(200).json({
       successMessage: "John Doe",
-      
     });
   } catch (err) {
     console.log(err);
     res.status(500).json({
       errorMessage: "Error sending mail",
-   
     });
   }
 };
-export default handler
+export default handler;

@@ -37,13 +37,14 @@ const ContactForm = () => {
         align="center"
         justify="space-between"
         direction={[
-          "column-reverse",
-          "column-reverse",
-          "column-reverse",
-          "row-reverse",
+          "column",
+          "column",
+          "column",
+          "row",
         ]}
         gap={{ base: "1rem", md: "1rem" }}
         color={useColorModeValue("theme.500", "theme.100")}
+        mt="8rem"
         w="100%"
       >
         <Box display="flex" flexDir="column" w="100%" mb="1rem">
