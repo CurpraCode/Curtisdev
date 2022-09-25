@@ -29,7 +29,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       return url !== router.asPath && setLoading(true);
     };
     const handleComplete = (url: any) => {
-      // return url === router.asPath && setLoading(false);
       window.Tawk_API.showWidget();
       setLoading(false);
     };
@@ -44,13 +43,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events, router.asPath]);
   return (
     <ChakraProvider theme={theme} resetCSS>
-      
+      <AnimatePresence exitBeforeEnter initial={true}>
         {pageLoad ? (
-          <Loader /> || "loading..."
+          <Loader />
         ) : (
           <>
             {loading ? (
-              <Loader /> || "loading..."
+              <Loader />
             ) : (
               <>
                 <Head>
@@ -64,7 +63,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     content="Portfolio of a software engineer, curpra code developer.... code it, debug it."
                   />
                   <meta name="keywords" content="Keywords" />
-                  <title>Canvey App || Enterprise</title>
+                  <title>Curtis Developer || Portfolio</title>
 
                   <link rel="manifest" href="/manifest.json" />
                   <link
@@ -100,7 +99,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             )}
           </>
         )}
-     
+      </AnimatePresence>
     </ChakraProvider>
   );
 }

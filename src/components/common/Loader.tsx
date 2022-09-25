@@ -5,11 +5,12 @@ const Loader = () => {
   return (
     <motion.div
       exit={{ opacity: 0 }}
-      initial={{ opacity: 0.7 }}
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
       <section className={styles.section}>
         <svg className={styles.svg}>
+          
           <filter id="gooey">
             <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
             <feColorMatrix
