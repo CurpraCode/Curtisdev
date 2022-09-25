@@ -5,7 +5,7 @@ const Loader = () => {
   return (
     <motion.div
       exit={{ opacity: 0 }}
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0.5 }}
       animate={{ opacity: 1 }}
     >
       <section className={styles.section}>
