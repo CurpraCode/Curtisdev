@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./styles/loader.module.css";
-
+import { motion } from "framer-motion";
 const Loader = () => {
   return (
-    <div>
+    <motion.div exit={{ opacity: 0 }}>
       <section className={styles.section}>
         <svg className={styles.svg}>
           <filter id="gooey">
@@ -33,7 +33,7 @@ const Loader = () => {
           <span className={styles.rotate4}></span>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 
