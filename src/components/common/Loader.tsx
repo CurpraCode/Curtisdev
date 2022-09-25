@@ -3,7 +3,11 @@ import styles from "./styles/loader.module.css";
 import { motion } from "framer-motion";
 const Loader = () => {
   return (
-    <motion.div exit={{ opacity: 0 }}>
+    <motion.div
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0.7 }}
+      animate={{ opacity: 1 }}
+    >
       <section className={styles.section}>
         <svg className={styles.svg}>
           <filter id="gooey">

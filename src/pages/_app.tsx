@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events, router.asPath]);
   return (
     <ChakraProvider theme={theme} resetCSS>
-      <AnimatePresence exitBeforeEnter>
+      
         {pageLoad ? (
           <Loader /> || "loading..."
         ) : (
@@ -100,7 +100,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             )}
           </>
         )}
-      </AnimatePresence>
+     
     </ChakraProvider>
   );
 }
