@@ -8,7 +8,7 @@ import theme from "../theme/theme";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Loader from "../components/common/Loader";
-import { AnimatePresence } from "framer-motion";
+import { AnimateSharedLayout, AnimatePresence, motion } from "framer-motion";
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
@@ -43,47 +43,55 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events, router.asPath]);
   return (
     <ChakraProvider theme={theme} resetCSS>
-      <AnimatePresence exitBeforeEnter initial={true}>
-        {pageLoad ? (
-          <Loader />
-        ) : (
-          <>
-            {loading ? (
+      <AnimateSharedLayout type="crossfade">
+        <AnimatePresence exitBeforeEnter initial={true}>
+          {pageLoad ? (
+            <motion.div key="loader">
               <Loader />
-            ) : (
-              <>
-                <Head>
-                  <meta charSet="utf-8" />
-                  <meta
-                    name="viewport"
-                    content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-                  />
-                  <meta
-                    name="description"
-                    content="Portfolio of a software engineer, curpra code developer.... code it, debug it."
-                  />
-                  <meta name="keywords" content="Keywords" />
-                  <title>Curtis Developer || Portfolio</title>
+            </motion.div>
+          ) : (
+            <>
+              {loading ? (
+                <motion.div key="loader">
+                  <Loader />
+                </motion.div>
+              ) : (
+                <>
+                  <Head>
+                    <meta charSet="utf-8" />
+                    <meta
+                      name="viewport"
+                      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+                    />
+                    <meta
+                      name="description"
+                      content="Portfolio of a software engineer, curpra code developer.... code it, debug it."
+                    />
+                    <meta name="keywords" content="Keywords" />
+                    <title>Curtis Developer || Portfolio</title>
 
-                  <link rel="manifest" href="/manifest.json" />
-                  <link
-                    href="/icon-192x192.png"
-                    rel="icon"
-                    type="image/png"
-                    sizes="16x16"
-                  />
-                  <link
-                    href="/icon-192x192.png"
-                    rel="icon"
-                    type="image/png"
-                    sizes="32x32"
-                  />
-                  <link rel="apple-touch-icon" href="/icon-192x192.png"></link>
-                </Head>
-                <Component {...pageProps} />
-                <AnimatedCursor />
-                <Script id="tawk" strategy="lazyOnload">
-                  {`
+                    <link rel="manifest" href="/manifest.json" />
+                    <link
+                      href="/icon-192x192.png"
+                      rel="icon"
+                      type="image/png"
+                      sizes="16x16"
+                    />
+                    <link
+                      href="/icon-192x192.png"
+                      rel="icon"
+                      type="image/png"
+                      sizes="32x32"
+                    />
+                    <link
+                      rel="apple-touch-icon"
+                      href="/icon-192x192.png"
+                    ></link>
+                  </Head>
+                  <Component {...pageProps} />
+                  <AnimatedCursor />
+                  <Script id="tawk" strategy="lazyOnload">
+                    {`
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
       (function(){
       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -94,12 +102,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       s0.parentNode.insertBefore(s1,s0);
       })();
       `}
-                </Script>
-              </>
-            )}
-          </>
-        )}
-      </AnimatePresence>
+                  </Script>
+                </>
+              )}
+            </>
+          )}
+        </AnimatePresence>
+      </AnimateSharedLayout>
     </ChakraProvider>
   );
 }
