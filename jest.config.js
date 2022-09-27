@@ -30,6 +30,6 @@ module.exports = {
 		"/node_modules/",
 		"^.+\\.module\\.(css|sass|scss)$",
 	],
-	setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-	modulePaths: ["<rootDir>"],
+	setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+	modulePaths: ["<rootDir>/node_modules", "<rootDir>/src", "<rootDir>/pages"],
 };
