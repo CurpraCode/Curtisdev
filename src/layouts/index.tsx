@@ -2,8 +2,8 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 // import Loader from "../loader/Loader";
 const Header = dynamic(() => import("../components/Header"), {
-  suspense: true,
-  ssr: true,
+  // suspense: true,
+  // ssr: false,
 });
 
 type LayoutProps = {

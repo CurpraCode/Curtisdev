@@ -1,0 +1,6 @@
+{
+    "useTabs": true,
+    "semi": true,
+    "doubleQuote": true,
+    "trailingComma": "es5"
+}
