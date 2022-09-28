@@ -16,7 +16,7 @@ import { useMail } from "../../hooks/useMail";
 import { useForm } from "react-hook-form";
 import { Imail } from "../../interface/mail.interface";
 import { UilMessage } from "@iconscout/react-unicons";
-import Footer from "../common/Footer"
+import Footer from "../common/Footer";
 
 const ContactForm = () => {
 	const { loading, sendEmailer } = useMail();
@@ -34,8 +34,9 @@ const ContactForm = () => {
 	};
 	return (
 		<Box
-    mt={["5rem","5.5rem","7rem","7rem"]}
-    p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}>
+			mt={["5rem", "5.5rem", "7rem", "7rem"]}
+			p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}
+		>
 			<Flex
 				align="center"
 				justify="space-between"
@@ -45,18 +46,19 @@ const ContactForm = () => {
 				// mt="6rem"
 				w="100%"
 			>
-				<Box display="flex" flexDir="column" w="100%" >
+				<Box display="flex" flexDir="column" w="100%">
 					<Heading
-						fontWeight={50}
-						fontSize={{ base: "1.4rem", md: "1.8rem", lg: "1.6rem" }}
+						fontWeight={400}
+						fontSize={{ base: "1.4rem", md: "1.5rem", lg: "1.6rem" }}
 						mb="0.8rem"
 					>
-						Write me
+						Contact Me
 					</Heading>
 					<Box as="form" onSubmit={handleSubmit(handleMail)} w="100%">
 						<Box py=".6rem">
 							<Input
-								fontSize={["1rem", "1rem", "1rem", "1rem"]}
+								fontSize="1rem"
+								fontWeight={400}
 								type="text"
 								placeholder="Enter your name"
 								_focus={{
@@ -75,7 +77,8 @@ const ContactForm = () => {
 
 						<Box py=".6rem">
 							<Input
-								fontSize={["1.1rem", "1.1rem", "1.3rem", "1.3rem"]}
+								fontSize="1rem"
+								fontWeight={400}
 								type="email"
 								placeholder="Enter your email"
 								_focus={{
@@ -95,11 +98,14 @@ const ContactForm = () => {
 						<Box py=".6rem">
 							<Input
 								bg={colorMode === "light" ? "theme.100" : "theme.500"}
-								fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
+                border="none"
+								fontSize="1rem"
+								fontWeight={400}
 								type="text"
 								placeholder="Enter Subject"
 								_focus={{
 									outline: "none",
+                  border: "none",
 								}}
 								_placeholder={{
 									color: colorMode === "light" ? "theme.500" : "theme.100",
@@ -114,7 +120,8 @@ const ContactForm = () => {
 						<Box py=".6rem">
 							<Textarea
 								bg={colorMode === "light" ? "theme.100" : "theme.500"}
-								fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
+								fontSize="1rem"
+								fontWeight={400}
 								mt="1rem"
 								focusBorderColor="theme.300"
 								placeholder="Enter your message"
@@ -143,7 +150,7 @@ const ContactForm = () => {
 							type="submit"
 							_focus={{
 								borderColor: "theme.300",
-                outline: "none",
+								outline: "none",
 							}}
 							_active={{
 								borderColor: "theme.300",
@@ -163,11 +170,9 @@ const ContactForm = () => {
 						</Button>
 					</Box>
 				</Box>
-				<Box display="block" w="100%">
-				
-				</Box>
+				<Box display="block" w="100%"></Box>
 			</Flex>
-      <Footer/>
+			<Footer />
 		</Box>
 	);
 };

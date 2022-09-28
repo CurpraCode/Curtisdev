@@ -93,7 +93,7 @@ function MyApp({ Component, pageProps }: Props): JSX.Element {
 										></link>
 									</Head>
 									<Component {...pageProps} />
-									<AnimatedCursor color="#61DAFB" />
+									<AnimatedCursor />
 									<Script id="tawk" strategy="lazyOnload">
 										{`
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
