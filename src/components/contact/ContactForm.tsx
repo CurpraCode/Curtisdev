@@ -33,28 +33,30 @@ const ContactForm = () => {
 		console.log(res);
 	};
 	return (
-		<Box>
+		<Box
+    mt={["5rem","5.5rem","7rem","7rem"]}
+    p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}>
 			<Flex
 				align="center"
 				justify="space-between"
 				direction={["column", "column", "column", "row"]}
 				gap={{ base: "1rem", md: "1rem" }}
 				color={useColorModeValue("theme.500", "theme.100")}
-				mt="6rem"
+				// mt="6rem"
 				w="100%"
 			>
 				<Box display="flex" flexDir="column" w="100%" >
 					<Heading
 						fontWeight={50}
 						fontSize={{ base: "1.4rem", md: "1.8rem", lg: "1.6rem" }}
-						mb="1rem"
+						mb="0.8rem"
 					>
 						Write me
 					</Heading>
 					<Box as="form" onSubmit={handleSubmit(handleMail)} w="100%">
 						<Box py=".6rem">
 							<Input
-								fontSize={["1.1rem", "1.1rem", "1.2rem", "1.3rem"]}
+								fontSize={["1rem", "1rem", "1rem", "1rem"]}
 								type="text"
 								placeholder="Enter your name"
 								_focus={{
@@ -131,7 +133,7 @@ const ContactForm = () => {
 						<Button
 							size="lg"
 							w="100%"
-							mt="2rem"
+							mt="1.5rem"
 							color={useColorModeValue("theme.500", "theme.100")}
 							bg={"theme.300"}
 							_hover={{
@@ -141,6 +143,7 @@ const ContactForm = () => {
 							type="submit"
 							_focus={{
 								borderColor: "theme.300",
+                outline: "none",
 							}}
 							_active={{
 								borderColor: "theme.300",
