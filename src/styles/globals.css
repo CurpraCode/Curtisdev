@@ -14,7 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
-
+:focus{
+  outline:0 !important;
+}
 @media (prefers-color-scheme: #61DAFB) {
   html {
     color-scheme: #61DAFB;
