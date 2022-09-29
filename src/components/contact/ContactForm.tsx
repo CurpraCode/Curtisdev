@@ -34,7 +34,7 @@ const ContactForm = () => {
 	};
 	return (
 		<Box
-			mt={["5rem", "5.5rem", "7rem", "7rem"]}
+			mt={["5rem", "5.5rem", "6rem", "6rem"]}
 			p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}
 		>
 			<Flex

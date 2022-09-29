@@ -13,7 +13,7 @@ import Footer from "../common/Footer";
 const Intro = () => {
 	return (
 		<Box
-			mt="1rem"
+			mt="4rem"
 			p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}
 		>
 			<Box>
@@ -65,7 +65,7 @@ const Intro = () => {
 
 						<Footer />
 					</Box>
-					<Box width="27%" display={["none", "none", "none", "block"]}>
+					<Box width="25%" display={["none", "none", "none", "block"]}>
 						<Image
 							borderRadius="lg"
 							width="100%"

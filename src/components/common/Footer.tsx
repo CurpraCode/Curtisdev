@@ -10,7 +10,7 @@ import {
 const Footer = () => {
 	return (
 		<Box>
-			<Flex mt="4rem">
+			<Flex mt="3.5rem">
 				<Link
 					href="https://www.linkedin.com/in/curtis-oyakoya-b70b091b2/"
 					isExternal
