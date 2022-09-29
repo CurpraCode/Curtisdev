@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 const Loader = () => {
   return (
     <motion.div
-      exit={{ opacity: 0.5 }}
-      initial={{ opacity: 1 }}
+      // exit={{ opacity: 0.5 }}
+      // initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
+      transition={{ linear: [0.17, 0.67, 0.83, 0.97] }}
     >
       <section className={styles.section}>
         <svg className={styles.svg}>

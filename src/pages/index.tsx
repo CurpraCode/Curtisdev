@@ -16,9 +16,8 @@ const Intro = dynamic(() => import("../components/home/Intro"), {
 const Home: NextPage = () => {
 	return (
 		<motion.div
-			exit={{ opacity: 0.3 }}
-			initial={{ opacity: 0.5 }}
 			animate={{ opacity: 1 }}
+			transition={{ linear: [0.17, 0.67, 0.83, 0.97] }}
 		>
 			<div className={styles.container}>
 				<Head>
