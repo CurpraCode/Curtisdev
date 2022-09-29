@@ -19,6 +19,7 @@ import {
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import Footer from "./common/Footer";
 
 const links = [
   { name: "Home", to: "/" },
@@ -184,11 +185,13 @@ export default function Header() {
             >
               <DrawerOverlay />
               <DrawerContent>
-                <DrawerCloseButton mt="2rem" />
+                <DrawerCloseButton mt="2rem" _focus={{
+                  outline:0
+                }}/>
                 <DrawerBody
                 //   bg={colorMode === "dark" ? "theme.500" : "theme.100"}
                 >
-                  <Flex direction={"column"} align="center" gap={9} mt={"6rem"}>
+                  <Flex direction={"column"} align="start" gap={9} mt={"6rem"}>
                     {links.map(({ name, to }, index) => (
                       <NextLink key={index} href={to}>
                         <Collapse in={isOpen} animateOpacity>
@@ -219,6 +222,7 @@ export default function Header() {
                       </NextLink>
                     ))}
                   </Flex>
+                  <Footer/>
                 </DrawerBody>
               </DrawerContent>
             </Drawer>

@@ -1,33 +1,43 @@
 import type { NextPage } from "next";
+import { Suspense } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "../layouts";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 
+const Loader = dynamic(() => import("../components/common/Loader"));
 const Intro = dynamic(() => import("../components/home/Intro"), {
-  suspense: true,
-  ssr: true,
+	suspense: true,
+	ssr: true,
 });
 
 const Home: NextPage = () => {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Curtis|Developer</title>
-        <meta
-          name="description"
-          content="Portfolio of a software engineer, curpra code developer.... code it, debug it."
-        />
-        <link rel="icon" href="/icon-192x192.png" />
-      </Head>
-      <Layout>
-        <main className={styles.main}>
-          <Intro />
-        </main>
-      </Layout>
-    </div>
-  );
+	return (
+		<motion.div
+			animate={{ opacity: 1 }}
+			transition={{ linear: [0.17, 0.67, 0.83, 0.97] }}
+		>
+			<div className={styles.container}>
+				<Head>
+					<title>Curtis|Developer</title>
+					<meta
+						name="description"
+						content="Portfolio of a software engineer, curpra code developer.... code it, debug it."
+					/>
+					<link rel="icon" href="/icon-192x192.png" />
+				</Head>
+				<Layout>
+					<Suspense fallback={<Loader />}>
+						<main className={styles.main}>
+							<Intro />
+						</main>
+					</Suspense>
+				</Layout>
+			</div>
+		</motion.div>
+	);
 };
 
 export default Home;

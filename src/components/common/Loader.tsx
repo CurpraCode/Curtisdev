@@ -1,11 +1,17 @@
 import React from "react";
 import styles from "./styles/loader.module.css";
-
+import { motion } from "framer-motion";
 const Loader = () => {
   return (
-    <div>
+    <motion.div
+      // exit={{ opacity: 0.5 }}
+      // initial={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
+      transition={{ linear: [0.17, 0.67, 0.83, 0.97] }}
+    >
       <section className={styles.section}>
         <svg className={styles.svg}>
+          
           <filter id="gooey">
             <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
             <feColorMatrix
@@ -33,7 +39,7 @@ const Loader = () => {
           <span className={styles.rotate4}></span>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 
