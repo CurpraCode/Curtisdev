@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }: Props): JSX.Element {
 	}, [router.events, router.asPath]);
 	return (
 		<ChakraProvider theme={theme} resetCSS>
-			<AnimateSharedLayout type="crossfade">
+			<AnimateSharedLayout>
 				<AnimatePresence exitBeforeEnter initial={true}>
 					{pageLoad ? (
 						<motion.div key="loader">

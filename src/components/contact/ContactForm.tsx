@@ -49,7 +49,7 @@ const ContactForm = () => {
 				<Box display="flex" flexDir="column" w="100%">
 					<Heading
 						fontWeight={400}
-						fontSize={{ base: "1.4rem", md: "1.5rem", lg: "1.6rem" }}
+						fontSize={{ base: "1.2rem", md: "1.3rem", lg: "1.4rem" }}
 						mb="0.8rem"
 					>
 						Contact Me
@@ -61,6 +61,7 @@ const ContactForm = () => {
 								fontWeight={400}
 								type="text"
 								placeholder="Enter your name"
+								border="none"
 								_focus={{
 									outline: 0,
 								}}
@@ -81,6 +82,7 @@ const ContactForm = () => {
 								fontWeight={400}
 								type="email"
 								placeholder="Enter your email"
+								border="none"
 								_focus={{
 									outline: 0,
 								}}
@@ -98,14 +100,14 @@ const ContactForm = () => {
 						<Box py=".6rem">
 							<Input
 								bg={colorMode === "light" ? "theme.100" : "theme.500"}
-                border="none"
+								border="none"
 								fontSize="1rem"
 								fontWeight={400}
 								type="text"
 								placeholder="Enter Subject"
 								_focus={{
 									outline: "none",
-                  border: "none",
+									border: "none",
 								}}
 								_placeholder={{
 									color: colorMode === "light" ? "theme.500" : "theme.100",
@@ -122,6 +124,7 @@ const ContactForm = () => {
 								bg={colorMode === "light" ? "theme.100" : "theme.500"}
 								fontSize="1rem"
 								fontWeight={400}
+								border="none"
 								mt="1rem"
 								focusBorderColor="theme.300"
 								placeholder="Enter your message"
@@ -141,7 +144,7 @@ const ContactForm = () => {
 							size="lg"
 							w="100%"
 							mt="1.5rem"
-							color={useColorModeValue("theme.500", "theme.100")}
+							color="theme.100"
 							bg={"theme.300"}
 							_hover={{
 								bg: "theme.300",
