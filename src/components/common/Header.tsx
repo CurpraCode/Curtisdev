@@ -19,7 +19,7 @@ import {
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import Footer from "./common/Footer";
+import Footer from "./Footer";
 
 const links = [
   { name: "Home", to: "/" },
