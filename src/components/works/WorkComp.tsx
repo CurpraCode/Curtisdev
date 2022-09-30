@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 
-const AboutComp = () => { 
+const WorkComp = () => {
   return (
-    <Box>About</Box>
+    <Box>Work</Box>
   )
 }
 
-export default AboutComp
+export default WorkComp
