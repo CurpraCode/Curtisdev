@@ -4,6 +4,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  /* background-color: #F6FAFF !important */
 }
 
 a {
@@ -17,12 +18,12 @@ a {
 :focus{
   outline:0 !important;
 }
-@media (prefers-color-scheme: #61DAFB) {
+@media (prefers-color-scheme: dark) {
   html {
-    color-scheme: #61DAFB;
+    color-scheme: dark;
   }
   body {
-    color: #61DAFB;
-    /* background: black; */
+    color: #F6FAFF;
+    background: #1A202C ;
   }
 }

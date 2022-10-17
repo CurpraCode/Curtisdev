@@ -1,10 +1,16 @@
-import React from 'react';
-import { Box } from '@chakra-ui/react';
+import React from "react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
-const AboutComp = () => { 
-  return (
-    <Box>About</Box>
-  )
-}
+const AboutComp = () => {
+	return (
+		<Box>
+			<Text>
+				Hi, I'm Oyakoya Curtis. A software engineer with a fervor for creating
+				unique web experiences.
+			</Text>
+			<Flex></Flex>
+		</Box>
+	);
+};
 
-export default AboutComp
+export default AboutComp;

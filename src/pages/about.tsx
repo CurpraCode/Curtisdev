@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Layout from "../layouts";
 import styles from "../styles/Home.module.css";
 import { Suspense } from "react";
+const AboutComp = dynamic(() => import("../components/about/AboutComp"));
 const Loader = dynamic(() => import("../components/common/Loader"));
 
 const About: NextPage = () => {
@@ -19,7 +20,9 @@ const About: NextPage = () => {
 			</Head>
 			<Layout>
 				<Suspense fallback={<Loader />}>
-					<main className={styles.main}></main>
+					<main className={styles.main}>
+						<AboutComp />
+					</main>
 				</Suspense>
 			</Layout>
 		</div>

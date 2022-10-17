@@ -69,7 +69,7 @@ const ContactForm = () => {
 									color: colorMode === "light" ? "theme.500" : "theme.100",
 								}}
 								{...register("name", { required: true })}
-								bg={colorMode === "light" ? "theme.100" : "theme.500"}
+								bg={colorMode === "light" ? "theme.100" : "theme.550"}
 							/>
 							<Text color="red" fontSize="0.6rem">
 								{errors.name && "Name is required"}
@@ -89,7 +89,7 @@ const ContactForm = () => {
 								_placeholder={{
 									color: colorMode === "light" ? "theme.500" : "theme.100",
 								}}
-								bg={colorMode === "light" ? "theme.100" : "theme.500"}
+								bg={colorMode === "light" ? "theme.100" : "theme.550"}
 								{...register("email", { required: true })}
 							/>
 							<Text color="red" fontSize="0.6rem">
@@ -99,7 +99,7 @@ const ContactForm = () => {
 
 						<Box py=".6rem">
 							<Input
-								bg={colorMode === "light" ? "theme.100" : "theme.500"}
+								bg={colorMode === "light" ? "theme.100" : "theme.550"}
 								border="none"
 								fontSize="1rem"
 								fontWeight={400}
@@ -121,7 +121,7 @@ const ContactForm = () => {
 
 						<Box py=".6rem">
 							<Textarea
-								bg={colorMode === "light" ? "theme.100" : "theme.500"}
+								bg={colorMode === "light" ? "theme.100" : "theme.550"}
 								fontSize="1rem"
 								fontWeight={400}
 								border="none"

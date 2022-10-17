@@ -47,7 +47,7 @@ export default function Header() {
       justifyContent="space-between"
       alignItems="center"
       fontWeight="600"
-      //   bg={useColorModeValue("theme.100", "theme.500")}
+
     >
       <NextLink href="/" passHref>
         <Heading
@@ -75,7 +75,6 @@ export default function Header() {
           display={["none", "none", "none", "flex"]}
           w={["100%", "100%", "100%", "100%"]}
           alignItems="center"
-          //   justifyContent={"space-around"}
           fontSize={["1rem", "1.2rem"]}
         >
           {links.map(({ name, to }, index) => (
@@ -84,7 +83,6 @@ export default function Header() {
                 fontSize="1rem"
                 fontWeight={600}
                 px={["2rem", "4rem", "5rem", "1rem"]}
-                // py=".8rem"
                 _hover={{
                   textDecor: "none",
                   color: "theme.300",

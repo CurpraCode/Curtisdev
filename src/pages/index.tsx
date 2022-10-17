@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import Layout from "../layouts";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
+import { Flex, useColorModeValue } from "@chakra-ui/react";
 
 const Loader = dynamic(() => import("../components/common/Loader"));
 const Intro = dynamic(() => import("../components/home/Intro"), {
@@ -28,13 +29,22 @@ const Home: NextPage = () => {
 					/>
 					<link rel="icon" href="/icon-192x192.png" />
 				</Head>
-				<Layout>
-					<Suspense fallback={<Loader />}>
-						<main className={styles.main}>
-							<Intro />
-						</main>
-					</Suspense>
-				</Layout>
+				{/* <Flex
+					direction={"column"}
+					align="center"
+					justify={"center"}
+					flex="1"
+					width="100%"
+					bg={useColorModeValue("theme.100", "theme.500")}
+				> */}
+					<Layout>
+						<Suspense fallback={<Loader />}>
+							<main className={styles.main}>
+								<Intro />
+							</main>
+						</Suspense>
+					</Layout>
+				{/* </Flex> */}
 			</div>
 		</motion.div>
 	);
