@@ -17,7 +17,7 @@ interface Props extends AppProps {
 	color: string;
 }
 
-function MyApp({ Component, pageProps, color }: Props): JSX.Element {
+function MyApp({ Component, pageProps }: Props): JSX.Element {
 	const router = useRouter();
 	const [loading, setLoading] = useState(false);
 	const [pageLoad, setPageLoad] = useState(true);
