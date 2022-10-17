@@ -16,8 +16,8 @@ import add from "./add";
 // 	});
 // });
 
-describe("add test", () => {
-	it("should add test 3", () => {
-		expect(add(1, 2)).toBe(3);
-	}); 
-});
+// describe("add test", () => {
+// 	it("should add test 3", () => {
+// 		expect(add(1, 2)).toBe(3);
+// 	});
+// });

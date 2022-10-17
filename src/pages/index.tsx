@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -37,13 +37,13 @@ const Home: NextPage = () => {
 					width="100%"
 					bg={useColorModeValue("theme.100", "theme.500")}
 				> */}
-					<Layout>
-						<Suspense fallback={<Loader />}>
-							<main className={styles.main}>
-								<Intro />
-							</main>
-						</Suspense>
-					</Layout>
+				<Layout>
+					<Suspense fallback={<Loader />}>
+						<main className={styles.main}>
+							<Intro />
+						</main>
+					</Suspense>
+				</Layout>
 				{/* </Flex> */}
 			</div>
 		</motion.div>

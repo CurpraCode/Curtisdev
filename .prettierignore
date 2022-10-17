@@ -1,4 +1,4 @@
-# build
-# node_module
-# .husky
-# public
+build
+node_module
+.husky
+public

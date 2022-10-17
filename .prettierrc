@@ -3,5 +3,5 @@
 	"semi": true,
 	"doubleQuote": true,
 	"trailingComma": "all",
-	"endOfLine": "lf"
+	"endOfLine": "auto"
 }

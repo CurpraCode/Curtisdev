@@ -3,7 +3,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Layout from "../layouts";
 import styles from "../styles/Home.module.css";
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 const AboutComp = dynamic(() => import("../components/about/AboutComp"));
 const Loader = dynamic(() => import("../components/common/Loader"));
 

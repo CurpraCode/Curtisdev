@@ -1,22 +1,22 @@
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 // import Loader from "../loader/Loader";
 const Header = dynamic(() => import("../components/common/Header"), {
-  // suspense: true,
-  // ssr: false,
+	// suspense: true,
+	// ssr: false,
 });
 
 type LayoutProps = {
-  children: React.ReactNode;
+	children: React.ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
-  return (
-    <div>
-      <Header />
-      {children}
-    </div>
-  );
+	return (
+		<div>
+			<Header />
+			{children}
+		</div>
+	);
 };
 
 export default Layout;

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import sgMail, { MailDataRequired } from "@sendgrid/mail";
@@ -27,7 +29,7 @@ const sendEmail = async (options: any) => {
 console.log(
 	process.env.SENDGRID_API_KEY,
 	process.env.EMAIL_TO,
-	process.env.EMAIL_FROM
+	process.env.EMAIL_FROM,
 );
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	const { name, email, subject, message } = req.body;

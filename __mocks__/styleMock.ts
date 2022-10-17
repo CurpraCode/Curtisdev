@@ -1,2 +1,2 @@
-export {}
-module.exports = {}
+export {};
+module.exports = {};
