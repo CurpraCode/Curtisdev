@@ -5,7 +5,7 @@ Visit - [CurtisDev](https://curtisdev.com/)
 
 ## Built With
 
-To learn more about Next.js, take a look at the following resources:
+The following technologies are list below:
 
 - NextJs
 - TypeScript
