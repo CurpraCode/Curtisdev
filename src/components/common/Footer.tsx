@@ -1,11 +1,6 @@
 import React from "react";
-import { Flex, Box, Text, Link, } from "@chakra-ui/react";
-import {
-	UilArrowRight,
-	UilLinkedin,
-	UilGithub,
-	UilTwitter,
-} from "@iconscout/react-unicons";
+import { Flex, Box, Link } from "@chakra-ui/react";
+import { UilLinkedin, UilGithub, UilTwitter } from "@iconscout/react-unicons";
 
 const Footer = () => {
 	return (

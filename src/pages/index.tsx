@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "../layouts";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
+// import { Flex, useColorModeValue } from "@chakra-ui/react";
 
 const Loader = dynamic(() => import("../components/common/Loader"));
 const Intro = dynamic(() => import("../components/home/Intro"), {
@@ -28,6 +28,7 @@ const Home: NextPage = () => {
 					/>
 					<link rel="icon" href="/icon-192x192.png" />
 				</Head>
+
 				<Layout>
 					<Suspense fallback={<Loader />}>
 						<main className={styles.main}>

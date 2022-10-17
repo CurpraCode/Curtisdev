@@ -1,12 +1,13 @@
+import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "../layouts";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 
 const Loader = dynamic(() => import("../components/common/Loader"));
+const WorkComp = dynamic(() => import("../components/works/WorkComp"));
 
 const Works: NextPage = () => {
 	return (
@@ -22,7 +23,9 @@ const Works: NextPage = () => {
 
 			<Layout>
 				<main className={styles.main}>
-					<Suspense fallback={<Loader />}>Coming soon</Suspense>
+					<Suspense fallback={<Loader />}>
+						<WorkComp />
+					</Suspense>
 				</main>
 			</Layout>
 		</div>

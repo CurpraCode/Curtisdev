@@ -1,19 +1,14 @@
 import React from "react";
-import { Flex, Box, Text, Link, Image, Button } from "@chakra-ui/react";
+import { Flex, Box, Text, Image, Button } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Typewriter from "typewriter-effect";
-import {
-	UilArrowRight,
-	UilLinkedin,
-	UilGithub,
-	UilTwitter,
-} from "@iconscout/react-unicons";
+import { UilArrowRight } from "@iconscout/react-unicons";
 import Footer from "../common/Footer";
 
 const Intro = () => {
 	return (
 		<Box
-			mt="4rem"
+			mt="8rem"
 			p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}
 		>
 			<Box>

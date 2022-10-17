@@ -1,6 +1,5 @@
 import React, { Suspense } from "react";
 import type { NextPage } from "next";
-import { Box } from "@chakra-ui/react";
 import styles from "../styles/Home.module.css";
 import Layout from "../layouts";
 import dynamic from "next/dynamic";
@@ -12,12 +11,12 @@ const ContactForm = dynamic(() => import("../components/contact/ContactForm"), {
 	suspense: true,
 	ssr: true,
 });
+
 const contact: NextPage = () => {
 	return (
 		<motion.div
-			exit={{ opacity: 1 }}
-			initial={{ opacity: 0.1 }}
 			animate={{ opacity: 1 }}
+			transition={{ linear: [0.17, 0.67, 0.83, 0.97] }}
 		>
 			<div className={styles.container}>
 				<Layout>

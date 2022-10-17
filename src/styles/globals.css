@@ -1,28 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Poppins:wght@400;500;600&display=swap");
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+	/* background-color: #f6faff; */
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
-:focus{
-  outline:0 !important;
+:focus {
+	outline: 0 !important;
 }
-@media (prefers-color-scheme: #61DAFB) {
-  html {
-    color-scheme: #61DAFB;
-  }
-  body {
-    color: #61DAFB;
-    /* background: black; */
-  }
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+	body {
+		color: #f6faff;
+		background: #1a202c;
+	}
 }
