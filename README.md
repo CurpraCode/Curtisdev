@@ -2,7 +2,6 @@
 
 Visit - [CurtisDev](https://curtisdev.com/)
 
-
 ## Built With
 
 The following technologies are list below:
@@ -11,7 +10,6 @@ The following technologies are list below:
 - TypeScript
 - Chakra-UI
 - ReactJs
-
 
 ## Deployment
 

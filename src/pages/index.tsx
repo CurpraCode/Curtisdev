@@ -1,12 +1,11 @@
 import type { NextPage } from "next";
 import React, { Suspense } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "../layouts";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import { Flex, useColorModeValue } from "@chakra-ui/react";
+// import { Flex, useColorModeValue } from "@chakra-ui/react";
 
 const Loader = dynamic(() => import("../components/common/Loader"));
 const Intro = dynamic(() => import("../components/home/Intro"), {

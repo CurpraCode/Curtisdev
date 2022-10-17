@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import React, { Suspense } from "react";
+import React from "react";
 // import Loader from "../loader/Loader";
 const Header = dynamic(() => import("../components/common/Header"), {
 	// suspense: true,

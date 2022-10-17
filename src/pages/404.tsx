@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
 import Layout from "../layouts";
-import { Box, Center } from "@chakra-ui/react";
+import { Center } from "@chakra-ui/react";
 const Index = () => {
 	return (
 		<>

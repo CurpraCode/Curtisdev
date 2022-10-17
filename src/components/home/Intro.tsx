@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text, Link, Image, Button } from "@chakra-ui/react";
+import { Flex, Box, Text, Image, Button } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Typewriter from "typewriter-effect";
 import { UilArrowRight } from "@iconscout/react-unicons";

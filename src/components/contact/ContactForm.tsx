@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState } from "react";
+import React from "react";
 import {
 	Flex,
 	Box,
 	Heading,
 	Button,
-	Image as ChakraImage,
 	Input,
 	Textarea,
 	Spinner,

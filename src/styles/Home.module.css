@@ -1,15 +1,12 @@
 .container {
-  padding: 0 2rem;
+	padding: 0 2rem;
 }
 
 .main {
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  flex: 1;
-  display: flex;
- 
-  align-items: center;
+	min-height: 100vh;
+	font-family: "Poppins", sans-serif;
+	flex: 1;
+	display: flex;
+
+	align-items: center;
 }
-
-
-
