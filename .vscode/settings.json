@@ -1,7 +1,10 @@
 {
-    "cSpell.words": [
-        "iconscout",
-        "SENDGRID",
-        "Tawk"
-    ]
+	// recommended settings for ESLint and Prettier
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+
+	"cSpell.words": ["iconscout", "SENDGRID", "Tawk"]
 }
