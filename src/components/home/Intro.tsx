@@ -8,7 +8,7 @@ import Footer from "../common/Footer";
 const Intro = () => {
 	return (
 		<Box
-			mt="4rem"
+			mt="8rem"
 			p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}
 		>
 			<Box>

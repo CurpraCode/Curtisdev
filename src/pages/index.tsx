@@ -28,14 +28,7 @@ const Home: NextPage = () => {
 					/>
 					<link rel="icon" href="/icon-192x192.png" />
 				</Head>
-				{/* <Flex
-					direction={"column"}
-					align="center"
-					justify={"center"}
-					flex="1"
-					width="100%"
-					bg={useColorModeValue("theme.100", "theme.500")}
-				> */}
+
 				<Layout>
 					<Suspense fallback={<Loader />}>
 						<main className={styles.main}>
@@ -43,7 +36,6 @@ const Home: NextPage = () => {
 						</main>
 					</Suspense>
 				</Layout>
-				{/* </Flex> */}
 			</div>
 		</motion.div>
 	);

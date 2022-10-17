@@ -56,7 +56,6 @@ export default function Header() {
 					}}
 					fontSize="1rem"
 					letterSpacing="0.2rem"
-					// w="50%"
 					as={Link}
 					textDecor={"none"}
 				>
@@ -67,7 +66,6 @@ export default function Header() {
 				display="flex"
 				justifyContent={["end", "end", "end", "space-between"]}
 				alignItems="center"
-				// w={["50%", "50%", "50%", "100%"]}
 			>
 				<Box
 					display={["none", "none", "none", "flex"]}

@@ -15,9 +15,8 @@ const ContactForm = dynamic(() => import("../components/contact/ContactForm"), {
 const contact: NextPage = () => {
 	return (
 		<motion.div
-			exit={{ opacity: 1 }}
-			initial={{ opacity: 0.1 }}
 			animate={{ opacity: 1 }}
+			transition={{ linear: [0.17, 0.67, 0.83, 0.97] }}
 		>
 			<div className={styles.container}>
 				<Layout>

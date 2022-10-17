@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import dynamic from "next/dynamic";
 
 const Loader = dynamic(() => import("../components/common/Loader"));
+const WorkComp = dynamic(() => import("../components/works/WorkComp"));
 
 const Works: NextPage = () => {
 	return (
@@ -22,7 +23,9 @@ const Works: NextPage = () => {
 
 			<Layout>
 				<main className={styles.main}>
-					<Suspense fallback={<Loader />}>Coming soon</Suspense>
+					<Suspense fallback={<Loader />}>
+						<WorkComp />
+					</Suspense>
 				</main>
 			</Layout>
 		</div>
