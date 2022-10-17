@@ -2,6 +2,6 @@
 	"useTabs": true,
 	"semi": true,
 	"doubleQuote": true,
-	"trailingComma": "es5",
+	"trailingComma": "all",
 	"endOfLine": "lf"
 }
