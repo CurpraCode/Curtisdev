@@ -10,6 +10,8 @@ The following technologies are list below:
 - TypeScript
 - Chakra-UI
 - ReactJs
+- Eslint
+- Prettier
 
 ## Deployment
 
