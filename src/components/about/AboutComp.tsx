@@ -12,6 +12,9 @@ const AboutComp = () => {
 				Hi, I'm Oyakoya Curtis. A software engineer with a fervor for creating
 				unique web experiences.
 			</Text>
+			<Box>
+				<Text>Skills</Text>
+			</Box>
 
 			<Flex></Flex>
 		</Box>
