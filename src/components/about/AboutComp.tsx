@@ -23,8 +23,8 @@ const AboutComp = () => {
 				Hi, I'm Oyakoya Curtis. A software engineer with a fervor for creating
 				unique web experiences.
 			</Text>
-			<Text fontSize="35px" mt="1rem">
-				Skills
+			<Text fontSize="30px" fontWeight="bolder" mt="1rem" mb="1rem">
+				My Tech Stacks
 			</Text>
 			<Flex justifyContent="space-evenly">
 				<Box bg="white" p="0.8rem 0.9rem" borderRadius="0.6rem">
