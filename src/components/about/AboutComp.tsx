@@ -19,11 +19,13 @@ const AboutComp = () => {
 			mt="8rem"
 			p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}
 		>
-			<Text>
+			<Text fontSize="20px">
 				Hi, I'm Oyakoya Curtis. A software engineer with a fervor for creating
 				unique web experiences.
 			</Text>
-			<Text>Skills</Text>
+			<Text fontSize="35px" mt="1rem">
+				Skills
+			</Text>
 			<Flex justifyContent="space-evenly">
 				<Box bg="white" p="0.8rem 0.9rem" borderRadius="0.6rem">
 					<SiHtml5 color="#E34F26" size="30px" />
@@ -48,6 +50,9 @@ const AboutComp = () => {
 				</Box>
 				<Box bg="white" p="0.8rem 0.9rem" borderRadius="0.6rem">
 					<SiGraphql color="#E10098" size="30px" />
+				</Box>
+				<Box bg="white" p="0.8rem 0.9rem" borderRadius="0.6rem">
+					<SiNestjs color="#E10098" size="30px" />
 				</Box>
 			</Flex>
 		</Box>
