@@ -11,6 +11,10 @@ import {
 	SiApollographql,
 	SiGraphql,
 	SiNestjs,
+	SiGit,
+	SiGithub,
+	SiExpo,
+	SiNodedotjs,
 } from "react-icons/si";
 
 const AboutComp = () => {
@@ -23,7 +27,7 @@ const AboutComp = () => {
 				Hi, I'm Oyakoya Curtis. A software engineer with a fervor for creating
 				unique web experiences.
 			</Text>
-			<Text fontSize="30px" fontWeight="bolder" mt="1rem" mb="1rem">
+			<Text fontSize="30px" fontWeight="bolder" mt="2rem" mb="2rem">
 				My Tech Stacks
 			</Text>
 			<Flex justifyContent="space-evenly">
@@ -39,6 +43,8 @@ const AboutComp = () => {
 				<Box bg="white" p="0.8rem 0.9rem" borderRadius="0.6rem">
 					<SiReact color="#61DAFB" size="30px" />
 				</Box>
+			</Flex>
+			<Flex justifyContent="space-evenly" mt="2rem">
 				<Box bg="white" p="0.8rem 0.9rem" borderRadius="0.6rem">
 					<SiNextdotjs color="#000000" size="30px" />
 				</Box>
@@ -53,6 +59,20 @@ const AboutComp = () => {
 				</Box>
 				<Box bg="white" p="0.8rem 0.9rem" borderRadius="0.6rem">
 					<SiNestjs color="#E10098" size="30px" />
+				</Box>
+			</Flex>
+			<Flex justifyContent="space-evenly" mt="2rem">
+				<Box bg="white" p="0.8rem 0.9rem" borderRadius="0.6rem">
+					<SiNodedotjs color="#339933" size="30px" />
+				</Box>
+				<Box bg="white" p="0.8rem 0.9rem" borderRadius="0.6rem">
+					<SiExpo color="#000020" size="30px" />
+				</Box>
+				<Box bg="white" p="0.8rem 0.9rem" borderRadius="0.6rem">
+					<SiGit color="#F05032" size="30px" />
+				</Box>
+				<Box bg="white" p="0.8rem 0.9rem" borderRadius="0.6rem">
+					<SiGithub color="#181717" size="30px" />
 				</Box>
 			</Flex>
 		</Box>
