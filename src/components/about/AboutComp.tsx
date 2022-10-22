@@ -75,6 +75,7 @@ const AboutComp = () => {
 					<SiGithub color="#181717" size="30px" />
 				</Box>
 			</Flex>
+			<Box>View my work</Box>
 		</Box>
 	);
 };
