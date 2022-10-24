@@ -43,7 +43,7 @@ const ContactForm = () => {
 				direction={["column", "column", "column", "row"]}
 				gap={{ base: "1rem", md: "1rem" }}
 				color={useColorModeValue("theme.500", "theme.100")}
-				// mt="6rem"
+				mt="1rem"
 				w="100%"
 			>
 				<Box display="flex" flexDir="column" w="100%">

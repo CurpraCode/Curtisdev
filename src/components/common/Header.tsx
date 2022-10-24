@@ -185,9 +185,7 @@ export default function Header() {
 										outline: 0,
 									}}
 								/>
-								<DrawerBody
-								//   bg={colorMode === "dark" ? "theme.500" : "theme.100"}
-								>
+								<DrawerBody>
 									<Flex direction={"column"} align="start" gap={9} mt={"6rem"}>
 										{links.map(({ name, to }, index) => (
 											<NextLink key={index} href={to}>
@@ -195,7 +193,7 @@ export default function Header() {
 													<Link
 														color={pathname === to ? "theme.300" : colorSelect}
 														fontWeight={700}
-														px={["2rem", "0.6rem", "1rem", "2rem"]}
+														px={["0.6rem", "0.6rem", "1rem", "2rem"]}
 														py=".8rem"
 														_hover={{
 															textDecor: "none",

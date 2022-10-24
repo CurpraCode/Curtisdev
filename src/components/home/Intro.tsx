@@ -14,7 +14,9 @@ const Intro = () => {
 			<Box>
 				<Flex justifyContent="space-between">
 					<Box mt="1rem">
-						<Text mb="2rem">Hello World</Text>
+						<Text mb="2rem" fontWeight="bold">
+							Hello World
+						</Text>
 
 						<Typewriter
 							options={{
