@@ -35,7 +35,7 @@ const Intro = () => {
 							fontSize={["1.2rem", "1.8rem", "2.5rem", "2.5rem"]}
 							fontWeight="bold"
 						>
-							I build web experience <br /> and awesome web applications
+							I build unique web <br /> and mobile applications
 						</Text>
 						<NextLink href="/about" passHref>
 							<Button

@@ -38,23 +38,22 @@ const AboutComp = () => {
 		<Box
 			maxWidth="1140px"
 			m="15rem auto 0"
-			mt="8rem"
+			mt="6rem"
 			mb="4rem"
 			p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}
 		>
-			<Heading mb="1rem">
-				Hi, I'm Oyakoya Curtis. <br /> A software engineer with a fervor for
-				creating unique <br /> web and mobile experiences.
+			<Heading mb="1.5rem">
+				Hi, I'm Oyakoya Curtis. <br /> A software engineer passionately creating
+				unique <br /> web and mobile experiences.
 			</Heading>
 			<Text>
-				I am a creative Software Engineer and Self-Proclaimed genius. I have
-				always been passionate about everything related to technology and IT,
-				especially the web professions, which I made my career by always giving
-				the best of myself as a Software Engineer. I also love to code things
-				from scratch, and enjoy bringing ideas to life in the browser, combining
-				the acquisition of new knowledge with independent work on various
-				projects. Aside coding, I love watching anime and traveling to different
-				places.
+				I am a creative Software Engineer and Self-Proclaimed genius.
+				Passionately working remotely and looking for an opportunity to work at
+				a product-driven company to solve exciting problems that delight
+				end-users. I also love to code things from scratch, and enjoy bringing
+				ideas to life in the browser and native environment, combining the
+				acquisition of new knowledge with independent work on various projects.
+				Aside coding, I love watching anime and traveling to different places.
 			</Text>
 			<Button
 				rounded="md"
@@ -157,7 +156,7 @@ const AboutComp = () => {
 			</Flex>
 			<Box mt="6rem">View my work</Box>
 
-			<Box bg="theme.300" mt="3rem" p="2rem 3rem" borderRadius="1rem">
+			<Box bg="theme.300" mt="3rem" p="4rem 3rem" borderRadius="1rem">
 				<HStack
 					justifyContent="space-between"
 					alignItems="center"
@@ -172,7 +171,7 @@ const AboutComp = () => {
 								fontSize={[10, 15, 18, 18]}
 								mr="1rem"
 								borderColor="theme.350"
-								borderWidth="3px"
+								borderWidth="2px"
 								bg="none"
 								leftIcon={<HiMail />}
 							>
@@ -183,7 +182,7 @@ const AboutComp = () => {
 							<Button
 								fontSize={[10, 15, 18, 18]}
 								borderColor="theme.350"
-								borderWidth="3px"
+								borderWidth="2px"
 								bg="none"
 								leftIcon={<MdWork />}
 							>
