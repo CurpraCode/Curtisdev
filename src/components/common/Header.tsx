@@ -31,12 +31,14 @@ export default function Header() {
 	const { colorMode, toggleColorMode } = useColorMode();
 	const { pathname } = useRouter();
 
-	const colorSelect = colorMode === "dark" ? "theme.100" : "theme.400";
+	const colorSelect = colorMode === "dark" ? "theme.100" : "theme.500";
+	const bgMode = colorMode === "dark" ? "theme.350" : "theme.50";
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const btnRef = useRef<HTMLDivElement | null>(null);
 	const [isTab] = useMediaQuery("(max-width: 991px)");
 	return (
 		<Flex
+			bg={bgMode}
 			position="fixed"
 			top="0"
 			zIndex="50"
