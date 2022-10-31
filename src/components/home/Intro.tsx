@@ -21,8 +21,8 @@ const Intro = () => {
 						<Typewriter
 							options={{
 								strings: [
-									"Oyakoya Curtis",
-									"React Developer",
+									" Curtis Oyakoya",
+									"React Engineer",
 									"Frontend Engineer",
 									"Software Engineer",
 								],

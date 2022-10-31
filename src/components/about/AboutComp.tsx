@@ -7,6 +7,8 @@ import {
 	Button,
 	Tooltip,
 	useColorMode,
+	Heading,
+	HStack,
 } from "@chakra-ui/react";
 import {
 	SiHtml5,
@@ -23,30 +25,57 @@ import {
 	SiExpo,
 	SiNodedotjs,
 } from "react-icons/si";
-// import NextLink from "next/link";
+import { MdWork } from "react-icons/md";
+import { HiMail } from "react-icons/hi";
+import { AiOutlineCloudDownload } from "react-icons/ai";
+import Link from "next/link";
+import Footer from "../common/Footer";
 
 const AboutComp = () => {
 	const { colorMode } = useColorMode();
 	const colorSelect = colorMode === "dark" ? "theme.100" : "theme.350";
 	return (
 		<Box
+			maxWidth="1140px"
+			m="15rem auto 0"
 			mt="8rem"
+			mb="4rem"
 			p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}
 		>
-			<Text fontSize="30px" fontWeight="bolder">
+			<Heading mb="1rem">
 				Hi, I'm Oyakoya Curtis. <br /> A software engineer with a fervor for
-				creating unique web experiences.
-			</Text>
+				creating unique <br /> web and mobile experiences.
+			</Heading>
 			<Text>
-				I am a creative FullStack Engineer and Self-Proclaimed genius. I have
+				I am a creative Software Engineer and Self-Proclaimed genius. I have
 				always been passionate about everything related to technology and IT,
 				especially the web professions, which I made my career by always giving
-				the best of myself as a Web Developer. I also love to code things from
-				scratch, and enjoy bringing ideas to life in the browser, combining the
-				acquisition of new knowledge with independent work on various projects.
-				Aside code I love watching movies and travelling to different places.
+				the best of myself as a Software Engineer. I also love to code things
+				from scratch, and enjoy bringing ideas to life in the browser, combining
+				the acquisition of new knowledge with independent work on various
+				projects. Aside coding, I love watching anime and traveling to different
+				places.
 			</Text>
-			<Text fontSize="25px" fontWeight="bolder" mt="2rem" mb="2rem">
+			<Button
+				rounded="md"
+				bg="#61DAFB"
+				fontSize=".9rem"
+				mt="2rem"
+				p="1.2rem 1.5rem"
+				rightIcon={<AiOutlineCloudDownload />}
+				_hover={{
+					bg: "#61DAFB",
+				}}
+				_active={{
+					bg: "#61DAFB",
+				}}
+				_focus={{
+					bg: "#61DAFB",
+				}}
+			>
+				Download Resume
+			</Button>
+			<Text fontSize="25px" fontWeight="bolder" mt="6rem" mb="2rem">
 				My Tech Stacks
 			</Text>
 			<Flex justifyContent="space-evenly">
@@ -126,9 +155,45 @@ const AboutComp = () => {
 					</Box>
 				</Tooltip>
 			</Flex>
-			<Box>View my work</Box>
+			<Box mt="6rem">View my work</Box>
 
-			<Button>View Resume</Button>
+			<Box bg="theme.300" mt="3rem" p="2rem 3rem" borderRadius="1rem">
+				<HStack
+					justifyContent="space-between"
+					alignItems="center"
+					flexDir={{ base: "column", lg: "row" }}
+				>
+					<Heading fontSize={["15", "20", "30", "30"]} mb={{ base: "1.5rem" }}>
+						Interested In Working With Me?
+					</Heading>
+					<Flex>
+						<Link href="mailto:curtsoyaks@gmail.com">
+							<Button
+								fontSize={[10, 15, 18, 18]}
+								mr="1rem"
+								borderColor="theme.350"
+								borderWidth="3px"
+								bg="none"
+								leftIcon={<HiMail />}
+							>
+								Mail Me
+							</Button>
+						</Link>
+						<Link href="/works">
+							<Button
+								fontSize={[10, 15, 18, 18]}
+								borderColor="theme.350"
+								borderWidth="3px"
+								bg="none"
+								leftIcon={<MdWork />}
+							>
+								View Project
+							</Button>
+						</Link>
+					</Flex>
+				</HStack>
+			</Box>
+			<Footer />
 		</Box>
 	);
 };
