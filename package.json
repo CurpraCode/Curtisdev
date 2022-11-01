@@ -32,7 +32,8 @@
 	"lint-staged": {
 		"./src/**": [
 			"eslint src/ --fix",
-			"prettier --write ."
+			"prettier --write .",
+			"commitlint --edit"
 		]
 	},
 	"devDependencies": {
