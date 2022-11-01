@@ -33,7 +33,8 @@ const Intro = () => {
 						/>
 						<Text
 							mt="2rem"
-							fontSize={["1.2rem", "1.8rem", "2.5rem", "2.5rem"]}
+							mb="2rem"
+							fontSize={["2rem", "1.8rem", "2.5rem", "2.5rem"]}
 							fontWeight="bold"
 						>
 							I build unique web <br /> and mobile applications
@@ -44,7 +45,7 @@ const Intro = () => {
 								bg="#61DAFB"
 								fontSize=".8rem"
 								letterSpacing={2}
-								mt="2rem"
+								mb="4rem"
 								p="1.5rem 2rem"
 								rightIcon={<UilArrowRight />}
 								_hover={{
