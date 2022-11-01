@@ -9,6 +9,7 @@ import {
 	useColorMode,
 	Heading,
 	HStack,
+	Image,
 } from "@chakra-ui/react";
 import {
 	SiHtml5,
@@ -29,6 +30,7 @@ import { MdWork } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import Link from "next/link";
+import { UilArrowRight } from "@iconscout/react-unicons";
 import Footer from "../common/Footer";
 
 const AboutComp = () => {
@@ -43,7 +45,7 @@ const AboutComp = () => {
 			p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}
 		>
 			<Heading mb="1.5rem" fontSize={["22", "28", "38"]}>
-				Hi, I'm Oyakoya Curtis. <br /> A software engineer passionately creating
+				Hi, I'm Curtis Oyakoya. <br /> A software engineer passionately creating
 				unique <br /> web and mobile experiences.
 			</Heading>
 			<Text fontSize={["12", "18", "18"]}>
@@ -73,7 +75,7 @@ const AboutComp = () => {
 			>
 				Download Resume
 			</Button>
-			<Text fontSize="25px" fontWeight="bolder" mt="6rem" mb="2rem">
+			<Text fontSize="25px" fontWeight="bolder" mt="6rem" mb="4rem">
 				My Tech Stacks
 			</Text>
 			<Flex justifyContent="space-evenly">
@@ -100,7 +102,7 @@ const AboutComp = () => {
 					</Box>
 				</Tooltip>
 			</Flex>
-			<Flex justifyContent="space-evenly" mt="2rem">
+			<Flex justifyContent="space-evenly" mt="4rem">
 				<Tooltip label="Nextjs" placement="top" borderRadius="4">
 					<Box bg={colorSelect} p="0.8rem 0.9rem" borderRadius="0.6rem">
 						<SiNextdotjs color="#000000" size="30px" />
@@ -130,7 +132,7 @@ const AboutComp = () => {
 					</Box>
 				</Tooltip>
 			</Flex>
-			<Flex justifyContent="space-evenly" mt="2rem">
+			<Flex justifyContent="space-evenly" mt="4rem">
 				<Tooltip label="Nodejs" placement="top" borderRadius="4">
 					<Box bg={colorSelect} p="0.8rem 0.9rem" borderRadius="0.6rem">
 						<SiNodedotjs color="#339933" size="30px" />
@@ -153,13 +155,54 @@ const AboutComp = () => {
 					</Box>
 				</Tooltip>
 			</Flex>
-			<Box fontSize="25px" fontWeight="bolder" mt="6rem">
+			<Text fontSize="25px" fontWeight="bolder" mt="6rem">
 				View my work
+			</Text>
+			<Box>
+				<Flex mt="4rem" flexDir={{ base: "column", lg: "row" }}>
+					<Box boxShadow="lg" rounded="md" p="1rem 1.2rem" mr="1rem">
+						<Image
+							src="https://curtisdev.netlify.app/static/media/dataware.d016f1cb.png"
+							alt="Dataware"
+							// width="50%"
+							rounded="md"
+						/>
+					</Box>
+					<Box boxShadow="lg" rounded="md" p="1rem 1.2rem">
+						<Image
+							src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
+							alt="Dataware"
+							// width="50%"
+							rounded="md"
+						/>
+					</Box>
+				</Flex>
+				<Link href="/works">
+					<Button
+						rounded="md"
+						bg="#61DAFB"
+						fontSize=".8rem"
+						mt="2rem"
+						p="1.5rem 2rem"
+						rightIcon={<UilArrowRight />}
+						_hover={{
+							bg: "#61DAFB",
+						}}
+						_active={{
+							bg: "#61DAFB",
+						}}
+						_focus={{
+							bg: "#61DAFB",
+						}}
+					>
+						View More
+					</Button>
+				</Link>
 			</Box>
 
 			<Box
 				bg="theme.300"
-				mt="3rem"
+				mt="6rem"
 				p={["1rem 2rem", "4rem 3rem", "4rem 3rem"]}
 				borderRadius="1rem"
 			>
