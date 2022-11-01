@@ -46,13 +46,13 @@ const AboutComp = () => {
 				Hi, I'm Oyakoya Curtis. <br /> A software engineer passionately creating
 				unique <br /> web and mobile experiences.
 			</Heading>
-			<Text fontSize={["14", "18", "18"]}>
-				I am a creative Software Engineer and Self-Proclaimed genius.
-				Passionately working remotely and looking for an opportunity to work at
-				a product-driven company to solve exciting problems that delight
-				end-users. I also love to code things from scratch, and enjoy bringing
-				ideas to life in the browser and native environment, combining the
-				acquisition of new knowledge with independent work on various projects.
+			<Text fontSize={["12", "18", "18"]}>
+				I am a creative Software Engineer. Passionately working remotely and
+				looking for an opportunity to work at a product-driven company to solve
+				exciting problems that delight end-users. I also love to code things
+				from scratch, and enjoy bringing ideas to life in the browser and native
+				environment, combining the acquisition of new knowledge with independent
+				work on various projects.
 			</Text>
 			<Button
 				rounded="md"
@@ -107,13 +107,13 @@ const AboutComp = () => {
 					</Box>
 				</Tooltip>
 
-				<Tooltip label="HTML" placement="top" borderRadius="4">
+				<Tooltip label="Typescript" placement="top" borderRadius="4">
 					<Box bg={colorSelect} p="0.8rem 0.9rem" borderRadius="0.6rem">
 						<SiTypescript color="#3178C6" size="30px" />
 					</Box>
 				</Tooltip>
 
-				<Tooltip label="HTML" placement="top" borderRadius="4">
+				<Tooltip label="Apollo Client" placement="top" borderRadius="4">
 					<Box bg={colorSelect} p="0.8rem 0.9rem" borderRadius="0.6rem">
 						<SiApollographql color="#311C87" size="30px" />
 					</Box>
@@ -153,7 +153,9 @@ const AboutComp = () => {
 					</Box>
 				</Tooltip>
 			</Flex>
-			<Box mt="6rem">View my work</Box>
+			<Box fontSize="25px" fontWeight="bolder" mt="6rem">
+				View my work
+			</Box>
 
 			<Box
 				bg="theme.300"
