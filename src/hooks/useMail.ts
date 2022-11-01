@@ -15,7 +15,7 @@ export const useMail = () => {
 				data: payload,
 			});
 			console.log(res);
-			cogoToast.success(`${res.data.success}`);
+			cogoToast.success(`${res.data.success}` || "success!");
 		} catch (error: any) {
 			console.log(error);
 			const errorResponse = error.response.errorMessage

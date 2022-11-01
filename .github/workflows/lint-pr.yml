@@ -26,4 +26,3 @@ jobs:
 
       - name: Lint PR
         run: echo ${{ github.event.pull_request.title }} | npx commitlint
-
