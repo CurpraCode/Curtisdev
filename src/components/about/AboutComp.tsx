@@ -160,7 +160,12 @@ const AboutComp = () => {
 			</Text>
 			<Box>
 				<Flex mt="4rem" flexDir={{ base: "column", lg: "row" }}>
-					<Box boxShadow="lg" rounded="md" p="1rem 1.2rem" mr="1rem">
+					<Box
+						boxShadow="lg"
+						rounded="md"
+						p="1rem 1.2rem"
+						mr={{ base: "0", lg: "1rem" }}
+					>
 						<Image
 							src="https://curtisdev.netlify.app/static/media/dataware.d016f1cb.png"
 							alt="Dataware"
@@ -183,7 +188,7 @@ const AboutComp = () => {
 						bg="#61DAFB"
 						fontSize=".8rem"
 						mt="2rem"
-						p="1.5rem 2rem"
+						p={["0.5rem 1rem", "1rem 1.5rem", "1.5rem 2rem", "1.5rem 2rem"]}
 						rightIcon={<UilArrowRight />}
 						_hover={{
 							bg: "#61DAFB",
