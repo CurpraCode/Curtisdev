@@ -4,6 +4,7 @@ import NextLink from "next/link";
 import Typewriter from "typewriter-effect";
 import { UilArrowRight } from "@iconscout/react-unicons";
 import Footer from "../common/Footer";
+import { GiWorld } from "react-icons/gi";
 
 const Intro = () => {
 	return (
@@ -14,17 +15,17 @@ const Intro = () => {
 			<Box>
 				<Flex justifyContent="space-between">
 					<Box mt="1rem">
-						<Text mb="2rem" fontWeight="bold">
-							Hello World
-						</Text>
+						<Flex alignItems="center" mb="2rem" fontWeight="bold">
+							<Text mr="4">Hello World</Text> <GiWorld />
+						</Flex>
 
 						<Typewriter
 							options={{
 								strings: [
-									"Oyakoya Curtis",
-									"React Developer",
-									"Frontend Engineer",
-									"Software Engineer",
+									"I am Curtis Oyakoya",
+									"I am a React Engineer",
+									"I am a Frontend Engineer",
+									"I am a Software Engineer",
 								],
 								autoStart: true,
 								loop: true,
@@ -35,7 +36,7 @@ const Intro = () => {
 							fontSize={["1.2rem", "1.8rem", "2.5rem", "2.5rem"]}
 							fontWeight="bold"
 						>
-							I build web experience <br /> and awesome web applications
+							I build unique web <br /> and mobile applications
 						</Text>
 						<NextLink href="/about" passHref>
 							<Button
@@ -59,7 +60,6 @@ const Intro = () => {
 								About Me
 							</Button>
 						</NextLink>
-
 						<Footer />
 					</Box>
 					<Box width="25%" display={["none", "none", "none", "block"]}>

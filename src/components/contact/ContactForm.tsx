@@ -55,7 +55,7 @@ const ContactForm = () => {
 						Contact Me
 					</Heading>
 					<Box as="form" onSubmit={handleSubmit(handleMail)} w="100%">
-						<Box py=".6rem">
+						<Box py=".3rem">
 							<Input
 								fontSize="1rem"
 								fontWeight={400}
@@ -76,7 +76,7 @@ const ContactForm = () => {
 							</Text>
 						</Box>
 
-						<Box py=".6rem">
+						<Box py=".3rem">
 							<Input
 								fontSize="1rem"
 								fontWeight={400}
@@ -97,7 +97,7 @@ const ContactForm = () => {
 							</Text>
 						</Box>
 
-						<Box py=".6rem">
+						<Box py=".3rem">
 							<Input
 								bg={colorMode === "light" ? "theme.100" : "theme.550"}
 								border="none"
@@ -119,7 +119,7 @@ const ContactForm = () => {
 							</Text>
 						</Box>
 
-						<Box py=".6rem">
+						<Box py=".3rem">
 							<Textarea
 								bg={colorMode === "light" ? "theme.100" : "theme.550"}
 								fontSize="1rem"
