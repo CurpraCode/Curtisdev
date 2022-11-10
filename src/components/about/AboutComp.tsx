@@ -169,15 +169,13 @@ const AboutComp = () => {
 						<Image
 							src="https://curtisdev.netlify.app/static/media/dataware.d016f1cb.png"
 							alt="Dataware"
-							// width="50%"
 							rounded="md"
 						/>
 					</Box>
 					<Box boxShadow="lg" rounded="md" p="1rem 1.2rem">
 						<Image
 							src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
-							alt="Dataware"
-							// width="50%"
+							alt="airbnb"
 							rounded="md"
 						/>
 					</Box>
