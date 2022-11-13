@@ -10,3 +10,28 @@
 
 	/* align-items: center; */
 }
+
+.boxanime * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+.boxanime {
+	position: relative;
+	overflow: hidden;
+}
+.boxanime img {
+	opacity: 1;
+	width: 100%;
+	display: block;
+}
+.boxanime img:hover {
+	opacity: 0.6;
+	transform: scale(1.1);
+}
+
+.boxanime:hover {
+	opacity: 1;
+	transform: translate(0, 0);
+}

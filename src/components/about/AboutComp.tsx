@@ -165,18 +165,50 @@ const AboutComp = () => {
 						rounded="md"
 						p="1rem 1.2rem"
 						mr={{ base: "0", lg: "1rem" }}
+						position="relative"
+						overflow="hidden"
+						transition="all 0.6s ease"
+						_hover={{
+							opacity: 1,
+							transform: "translate(0,0)",
+						}}
 					>
 						<Image
 							src="https://curtisdev.netlify.app/static/media/dataware.d016f1cb.png"
 							alt="Dataware"
 							rounded="md"
+							transition="all 0.6s ease"
+							opacity="1"
+							display="block"
+							_hover={{
+								opacity: 0.4,
+								transform: "scale(1.1)",
+							}}
 						/>
 					</Box>
-					<Box boxShadow="lg" rounded="md" p="1rem 1.2rem">
+					<Box
+						boxShadow="lg"
+						rounded="md"
+						p="1rem 1.2rem"
+						position="relative"
+						overflow="hidden"
+						transition="all 0.6s ease"
+						_hover={{
+							opacity: 1,
+							transform: "translate(0,0)",
+						}}
+					>
 						<Image
 							src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
 							alt="airbnb"
 							rounded="md"
+							transition="all 0.6s ease"
+							opacity="1"
+							display="block"
+							_hover={{
+								opacity: 0.4,
+								transform: "scale(1.1)",
+							}}
 						/>
 					</Box>
 				</Flex>

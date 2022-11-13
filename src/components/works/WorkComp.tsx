@@ -16,6 +16,7 @@ import {
 	SiExpo,
 	SiNodedotjs,
 } from "react-icons/si";
+import styles from "../../styles/Home.module.css";
 const WorkComp = () => {
 	const { colorMode } = useColorMode();
 	const colorSelect = colorMode === "dark" ? "theme.100" : "theme.350";
@@ -26,29 +27,16 @@ const WorkComp = () => {
 		>
 			<Flex flexDir={{ base: "column", lg: "row" }}>
 				<Box
+					className={styles.boxanime}
 					boxShadow="lg"
 					rounded="md"
 					p="1rem 1.2rem"
 					mr={{ base: "0", lg: "1rem" }}
-					position="relative"
-					overflow="hidden"
-					transition="all 0.6s ease"
-					_hover={{
-						opacity: 1,
-						transform: "translate(0,0)",
-					}}
 				>
 					<Image
 						src="https://curtisdev.netlify.app/static/media/dataware.d016f1cb.png"
 						alt="Dataware"
 						rounded="md"
-						opacity="1"
-						display="block"
-						transition="all 0.6s ease"
-						_hover={{
-							opacity: 0.4,
-							transform: "scale(1.1)",
-						}}
 					/>
 					<Flex
 						display="none"
@@ -56,13 +44,9 @@ const WorkComp = () => {
 						position="absolute"
 						justifyContent="space-evenly"
 						bottom="5px"
-						_hover={{
-							opacity: 1,
-							transform: "translate(0,0)",
-						}}
 					>
 						<Tooltip label="HTML" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.8rem 0.9rem" borderRadius="0.6rem">
+							<Box bg={colorSelect} p="0.3rem 0.4rem" borderRadius="0.6rem">
 								<SiHtml5 color="#E34F26" size="30px" />
 							</Box>
 						</Tooltip>
@@ -85,14 +69,62 @@ const WorkComp = () => {
 						</Tooltip>
 					</Flex>
 				</Box>
-				<Box boxShadow="lg" rounded="md" p="1rem 1.2rem">
+				<Box
+					boxShadow="lg"
+					rounded="md"
+					p="1rem 1.2rem"
+					mr={{ base: "0", lg: "1rem" }}
+					className={styles.boxanime}
+				>
 					<Image
 						src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
-						alt="airbnb"
+						alt="Dataware"
 						rounded="md"
 					/>
+					<Flex
+						opacity="0"
+						position="absolute"
+						justifyContent="space-evenly"
+						bottom="60px"
+						left="30px"
+						transform="translate(50%, 50%)"
+						transition="all 0.6s ease"
+						_hover={{
+							opacity: 1,
+							transform: "translate(0,0)",
+						}}
+					>
+						<Tooltip label="HTML" placement="top" borderRadius="4">
+							<Box bg={colorSelect} p="0.3rem 0.4rem" borderRadius="0.3rem">
+								<SiHtml5 color="#E34F26" size="15px" />
+							</Box>
+						</Tooltip>
+						<Tooltip label="CSS" placement="top" borderRadius="4">
+							<Box bg={colorSelect} p="0.3rem 0.4rem" borderRadius="0.3rem">
+								<SiCss3 color="#1572B6" size="15px" />
+							</Box>
+						</Tooltip>
+
+						<Tooltip label="JavaScript" placement="top" borderRadius="4">
+							<Box bg={colorSelect} p="0.3rem 0.4rem" borderRadius="0.3rem">
+								<SiJavascript color="#F7DF1E" size="15px" />
+							</Box>
+						</Tooltip>
+
+						<Tooltip label="Reactjs" placement="top" borderRadius="4">
+							<Box bg={colorSelect} p="0.3rem 0.4rem" borderRadius="0.3rem">
+								<SiReact color="#61DAFB" size="15px" />
+							</Box>
+						</Tooltip>
+					</Flex>
 				</Box>
-				<Box boxShadow="lg" rounded="md" p="1rem 1.2rem">
+
+				<Box
+					boxShadow="lg"
+					rounded="md"
+					p="1rem 1.2rem"
+					className={styles.boxanime}
+				>
 					<Image
 						src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
 						alt="airbnb"
@@ -106,6 +138,7 @@ const WorkComp = () => {
 					rounded="md"
 					p="1rem 1.2rem"
 					mr={{ base: "0", lg: "1rem" }}
+					className={styles.boxanime}
 				>
 					<Image
 						src="https://curtisdev.netlify.app/static/media/dataware.d016f1cb.png"
@@ -113,14 +146,24 @@ const WorkComp = () => {
 						rounded="md"
 					/>
 				</Box>
-				<Box boxShadow="lg" rounded="md" p="1rem 1.2rem">
+				<Box
+					boxShadow="lg"
+					rounded="md"
+					p="1rem 1.2rem"
+					className={styles.boxanime}
+				>
 					<Image
 						src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
 						alt="airbnb"
 						rounded="md"
 					/>
 				</Box>
-				<Box boxShadow="lg" rounded="md" p="1rem 1.2rem">
+				<Box
+					boxShadow="lg"
+					rounded="md"
+					p="1rem 1.2rem"
+					className={styles.boxanime}
+				>
 					<Image
 						src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
 						alt="airbnb"
