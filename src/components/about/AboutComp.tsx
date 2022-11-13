@@ -10,6 +10,7 @@ import {
 	Heading,
 	HStack,
 	Image,
+	Link,
 } from "@chakra-ui/react";
 import {
 	SiHtml5,
@@ -29,7 +30,6 @@ import {
 import { MdWork } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
 import { AiOutlineCloudDownload } from "react-icons/ai";
-import Link from "next/link";
 import { UilArrowRight } from "@iconscout/react-unicons";
 import Footer from "../common/Footer";
 import styles from "../../styles/Home.module.css";
@@ -57,25 +57,31 @@ const AboutComp = () => {
 				environment, combining the acquisition of new knowledge with independent
 				work on various projects.
 			</Text>
-			<Button
-				rounded="md"
-				bg="#61DAFB"
-				fontSize=".9rem"
-				mt="2rem"
-				p="1.2rem 1.5rem"
-				rightIcon={<AiOutlineCloudDownload />}
-				_hover={{
-					bg: "#61DAFB",
-				}}
-				_active={{
-					bg: "#61DAFB",
-				}}
-				_focus={{
-					bg: "#61DAFB",
-				}}
+			<Link
+				href="https://drive.google.com/file/d/1godtUoOT7siFRD1DmCYagmID6s4UNq7z/view?usp=sharing"
+				isExternal
 			>
-				Download Resume
-			</Button>
+				<Button
+					rounded="md"
+					bg="#61DAFB"
+					fontSize=".9rem"
+					mt="2rem"
+					p="1.2rem 1.5rem"
+					rightIcon={<AiOutlineCloudDownload />}
+					_hover={{
+						bg: "#61DAFB",
+					}}
+					_active={{
+						bg: "#61DAFB",
+					}}
+					_focus={{
+						bg: "#61DAFB",
+					}}
+				>
+					Download Resume
+				</Button>
+			</Link>
+
 			<Text fontSize="25px" fontWeight="bolder" mt="6rem" mb="4rem">
 				My Tech Stacks
 			</Text>
