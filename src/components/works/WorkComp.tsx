@@ -38,33 +38,36 @@ const WorkComp = () => {
 						alt="Dataware"
 						rounded="md"
 					/>
-					<Flex
-						display="none"
-						opacity="0"
-						position="absolute"
-						justifyContent="space-evenly"
-						bottom="5px"
-					>
+					<Flex className={styles.boxflex} justifyContent="space-evenly">
 						<Tooltip label="HTML" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.3rem 0.4rem" borderRadius="0.6rem">
-								<SiHtml5 color="#E34F26" size="30px" />
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiHtml5 color="#E34F26" size="25px" />
 							</Box>
 						</Tooltip>
 						<Tooltip label="CSS" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.8rem 0.9rem" borderRadius="0.6rem">
-								<SiCss3 color="#1572B6" size="30px" />
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiCss3 color="#1572B6" size="25px" />
 							</Box>
 						</Tooltip>
 
 						<Tooltip label="JavaScript" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.8rem 0.9rem" borderRadius="0.6rem">
-								<SiJavascript color="#F7DF1E" size="30px" />
-							</Box>
-						</Tooltip>
-
-						<Tooltip label="Reactjs" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.8rem 0.9rem" borderRadius="0.6rem">
-								<SiReact color="#61DAFB" size="30px" />
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiJavascript color="#F7DF1E" size="25px" />
 							</Box>
 						</Tooltip>
 					</Flex>
@@ -81,39 +84,36 @@ const WorkComp = () => {
 						alt="Dataware"
 						rounded="md"
 					/>
-					<Flex
-						opacity="0"
-						position="absolute"
-						justifyContent="space-evenly"
-						bottom="60px"
-						left="30px"
-						transform="translate(50%, 50%)"
-						transition="all 0.6s ease"
-						_hover={{
-							opacity: 1,
-							transform: "translate(0,0)",
-						}}
-					>
-						<Tooltip label="HTML" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.3rem 0.4rem" borderRadius="0.3rem">
-								<SiHtml5 color="#E34F26" size="15px" />
-							</Box>
-						</Tooltip>
-						<Tooltip label="CSS" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.3rem 0.4rem" borderRadius="0.3rem">
-								<SiCss3 color="#1572B6" size="15px" />
-							</Box>
-						</Tooltip>
-
+					<Flex className={styles.boxflex} justifyContent="space-evenly">
 						<Tooltip label="JavaScript" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.3rem 0.4rem" borderRadius="0.3rem">
-								<SiJavascript color="#F7DF1E" size="15px" />
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiJavascript color="#F7DF1E" size="25px" />
 							</Box>
 						</Tooltip>
 
 						<Tooltip label="Reactjs" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.3rem 0.4rem" borderRadius="0.3rem">
-								<SiReact color="#61DAFB" size="15px" />
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								borderRadius="0.3rem"
+								mr="1rem"
+							>
+								<SiReact color="#61DAFB" size="25px" />
+							</Box>
+						</Tooltip>
+						<Tooltip label="JavaScript" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiNextdotjs color="#000000" size="25px" />
 							</Box>
 						</Tooltip>
 					</Flex>
@@ -130,6 +130,45 @@ const WorkComp = () => {
 						alt="airbnb"
 						rounded="md"
 					/>
+					<Flex className={styles.boxflex} justifyContent="space-evenly">
+						<Tooltip label="HTML" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiHtml5 color="#E34F26" size="25px" />
+							</Box>
+						</Tooltip>
+						<Tooltip label="CSS" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiCss3 color="#1572B6" size="25px" />
+							</Box>
+						</Tooltip>
+
+						<Tooltip label="JavaScript" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiJavascript color="#F7DF1E" size="25px" />
+							</Box>
+						</Tooltip>
+
+						<Tooltip label="Reactjs" placement="top" borderRadius="4">
+							<Box bg={colorSelect} p="0.5rem 0.7rem" borderRadius="0.3rem">
+								<SiReact color="#61DAFB" size="25px" />
+							</Box>
+						</Tooltip>
+					</Flex>
 				</Box>
 			</Flex>
 			<Flex flexDir={{ base: "column", lg: "row" }}>
@@ -145,6 +184,45 @@ const WorkComp = () => {
 						alt="Dataware"
 						rounded="md"
 					/>
+					<Flex className={styles.boxflex} justifyContent="space-evenly">
+						<Tooltip label="HTML" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiHtml5 color="#E34F26" size="25px" />
+							</Box>
+						</Tooltip>
+						<Tooltip label="CSS" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiCss3 color="#1572B6" size="25px" />
+							</Box>
+						</Tooltip>
+
+						<Tooltip label="JavaScript" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiJavascript color="#F7DF1E" size="25px" />
+							</Box>
+						</Tooltip>
+
+						<Tooltip label="Reactjs" placement="top" borderRadius="4">
+							<Box bg={colorSelect} p="0.5rem 0.7rem" borderRadius="0.3rem">
+								<SiReact color="#61DAFB" size="25px" />
+							</Box>
+						</Tooltip>
+					</Flex>
 				</Box>
 				<Box
 					boxShadow="lg"
@@ -157,6 +235,45 @@ const WorkComp = () => {
 						alt="airbnb"
 						rounded="md"
 					/>
+					<Flex className={styles.boxflex} justifyContent="space-evenly">
+						<Tooltip label="HTML" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiHtml5 color="#E34F26" size="25px" />
+							</Box>
+						</Tooltip>
+						<Tooltip label="CSS" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiCss3 color="#1572B6" size="25px" />
+							</Box>
+						</Tooltip>
+
+						<Tooltip label="JavaScript" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiJavascript color="#F7DF1E" size="25px" />
+							</Box>
+						</Tooltip>
+
+						<Tooltip label="Reactjs" placement="top" borderRadius="4">
+							<Box bg={colorSelect} p="0.5rem 0.7rem" borderRadius="0.3rem">
+								<SiReact color="#61DAFB" size="25px" />
+							</Box>
+						</Tooltip>
+					</Flex>
 				</Box>
 				<Box
 					boxShadow="lg"
@@ -169,6 +286,45 @@ const WorkComp = () => {
 						alt="airbnb"
 						rounded="md"
 					/>
+					<Flex className={styles.boxflex} justifyContent="space-evenly">
+						<Tooltip label="HTML" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiHtml5 color="#E34F26" size="25px" />
+							</Box>
+						</Tooltip>
+						<Tooltip label="CSS" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiCss3 color="#1572B6" size="25px" />
+							</Box>
+						</Tooltip>
+
+						<Tooltip label="JavaScript" placement="top" borderRadius="4">
+							<Box
+								bg={colorSelect}
+								p="0.5rem 0.7rem"
+								mr="1rem"
+								borderRadius="0.3rem"
+							>
+								<SiJavascript color="#F7DF1E" size="25px" />
+							</Box>
+						</Tooltip>
+
+						<Tooltip label="Reactjs" placement="top" borderRadius="4">
+							<Box bg={colorSelect} p="0.5rem 0.7rem" borderRadius="0.3rem">
+								<SiReact color="#61DAFB" size="25px" />
+							</Box>
+						</Tooltip>
+					</Flex>
 				</Box>
 			</Flex>
 			<Footer />

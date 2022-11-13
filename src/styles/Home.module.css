@@ -17,6 +17,13 @@
 	-webkit-transition: all 0.6s ease;
 	transition: all 0.6s ease;
 }
+.boxflex {
+	position: absolute;
+	bottom: 80px;
+	left: 100px;
+	opacity: 0;
+	transform: translate(50%, 50%);
+}
 .boxanime {
 	position: relative;
 	overflow: hidden;
@@ -26,12 +33,16 @@
 	width: 100%;
 	display: block;
 }
-.boxanime img:hover {
-	opacity: 0.6;
+.boxanime:hover img {
+	opacity: 0.4;
 	transform: scale(1.1);
 }
 
 .boxanime:hover {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+.boxanime:hover .boxflex {
 	opacity: 1;
 	transform: translate(0, 0);
 }

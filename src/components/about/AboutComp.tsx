@@ -32,6 +32,7 @@ import { AiOutlineCloudDownload } from "react-icons/ai";
 import Link from "next/link";
 import { UilArrowRight } from "@iconscout/react-unicons";
 import Footer from "../common/Footer";
+import styles from "../../styles/Home.module.css";
 
 const AboutComp = () => {
 	const { colorMode } = useColorMode();
@@ -161,55 +162,95 @@ const AboutComp = () => {
 			<Box>
 				<Flex mt="4rem" flexDir={{ base: "column", lg: "row" }}>
 					<Box
+						className={styles.boxanime}
 						boxShadow="lg"
 						rounded="md"
 						p="1rem 1.2rem"
 						mr={{ base: "0", lg: "1rem" }}
-						position="relative"
-						overflow="hidden"
-						transition="all 0.6s ease"
-						_hover={{
-							opacity: 1,
-							transform: "translate(0,0)",
-						}}
 					>
 						<Image
 							src="https://curtisdev.netlify.app/static/media/dataware.d016f1cb.png"
 							alt="Dataware"
 							rounded="md"
-							transition="all 0.6s ease"
-							opacity="1"
-							display="block"
-							_hover={{
-								opacity: 0.4,
-								transform: "scale(1.1)",
-							}}
 						/>
+						<Flex className={styles.boxflex} justifyContent="space-evenly">
+							<Tooltip label="HTML" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									mr="1rem"
+									borderRadius="0.3rem"
+								>
+									<SiHtml5 color="#E34F26" size="25px" />
+								</Box>
+							</Tooltip>
+							<Tooltip label="CSS" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									mr="1rem"
+									borderRadius="0.3rem"
+								>
+									<SiCss3 color="#1572B6" size="25px" />
+								</Box>
+							</Tooltip>
+
+							<Tooltip label="JavaScript" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									mr="1rem"
+									borderRadius="0.3rem"
+								>
+									<SiJavascript color="#F7DF1E" size="25px" />
+								</Box>
+							</Tooltip>
+						</Flex>
 					</Box>
 					<Box
+						className={styles.boxanime}
 						boxShadow="lg"
 						rounded="md"
 						p="1rem 1.2rem"
-						position="relative"
-						overflow="hidden"
-						transition="all 0.6s ease"
-						_hover={{
-							opacity: 1,
-							transform: "translate(0,0)",
-						}}
 					>
 						<Image
 							src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
 							alt="airbnb"
 							rounded="md"
-							transition="all 0.6s ease"
-							opacity="1"
-							display="block"
-							_hover={{
-								opacity: 0.4,
-								transform: "scale(1.1)",
-							}}
 						/>
+						<Flex className={styles.boxflex} justifyContent="space-evenly">
+							<Tooltip label="JavaScript" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									mr="1rem"
+									borderRadius="0.3rem"
+								>
+									<SiJavascript color="#F7DF1E" size="25px" />
+								</Box>
+							</Tooltip>
+
+							<Tooltip label="Reactjs" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									borderRadius="0.3rem"
+									mr="1rem"
+								>
+									<SiReact color="#61DAFB" size="25px" />
+								</Box>
+							</Tooltip>
+							<Tooltip label="JavaScript" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									mr="1rem"
+									borderRadius="0.3rem"
+								>
+									<SiNextdotjs color="#000000" size="25px" />
+								</Box>
+							</Tooltip>
+						</Flex>
 					</Box>
 				</Flex>
 				<Link href="/works">
