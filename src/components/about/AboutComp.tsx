@@ -10,6 +10,7 @@ import {
 	Heading,
 	HStack,
 	Image,
+	Link,
 } from "@chakra-ui/react";
 import {
 	SiHtml5,
@@ -29,9 +30,9 @@ import {
 import { MdWork } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
 import { AiOutlineCloudDownload } from "react-icons/ai";
-import Link from "next/link";
 import { UilArrowRight } from "@iconscout/react-unicons";
 import Footer from "../common/Footer";
+import styles from "../../styles/Home.module.css";
 
 const AboutComp = () => {
 	const { colorMode } = useColorMode();
@@ -56,25 +57,31 @@ const AboutComp = () => {
 				environment, combining the acquisition of new knowledge with independent
 				work on various projects.
 			</Text>
-			<Button
-				rounded="md"
-				bg="#61DAFB"
-				fontSize=".9rem"
-				mt="2rem"
-				p="1.2rem 1.5rem"
-				rightIcon={<AiOutlineCloudDownload />}
-				_hover={{
-					bg: "#61DAFB",
-				}}
-				_active={{
-					bg: "#61DAFB",
-				}}
-				_focus={{
-					bg: "#61DAFB",
-				}}
+			<Link
+				href="https://drive.google.com/file/d/1godtUoOT7siFRD1DmCYagmID6s4UNq7z/view?usp=sharing"
+				isExternal
 			>
-				Download Resume
-			</Button>
+				<Button
+					rounded="md"
+					bg="#61DAFB"
+					fontSize=".9rem"
+					mt="2rem"
+					p="1.2rem 1.5rem"
+					rightIcon={<AiOutlineCloudDownload />}
+					_hover={{
+						bg: "#61DAFB",
+					}}
+					_active={{
+						bg: "#61DAFB",
+					}}
+					_focus={{
+						bg: "#61DAFB",
+					}}
+				>
+					Download Resume
+				</Button>
+			</Link>
+
 			<Text fontSize="25px" fontWeight="bolder" mt="6rem" mb="4rem">
 				My Tech Stacks
 			</Text>
@@ -161,6 +168,7 @@ const AboutComp = () => {
 			<Box>
 				<Flex mt="4rem" flexDir={{ base: "column", lg: "row" }}>
 					<Box
+						className={styles.boxanime}
 						boxShadow="lg"
 						rounded="md"
 						p="1rem 1.2rem"
@@ -169,17 +177,86 @@ const AboutComp = () => {
 						<Image
 							src="https://curtisdev.netlify.app/static/media/dataware.d016f1cb.png"
 							alt="Dataware"
-							// width="50%"
 							rounded="md"
 						/>
+						<Flex className={styles.boxflex} justifyContent="space-evenly">
+							<Tooltip label="HTML" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									mr="1rem"
+									borderRadius="0.3rem"
+								>
+									<SiHtml5 color="#E34F26" size="25px" />
+								</Box>
+							</Tooltip>
+							<Tooltip label="CSS" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									mr="1rem"
+									borderRadius="0.3rem"
+								>
+									<SiCss3 color="#1572B6" size="25px" />
+								</Box>
+							</Tooltip>
+
+							<Tooltip label="JavaScript" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									mr="1rem"
+									borderRadius="0.3rem"
+								>
+									<SiJavascript color="#F7DF1E" size="25px" />
+								</Box>
+							</Tooltip>
+						</Flex>
 					</Box>
-					<Box boxShadow="lg" rounded="md" p="1rem 1.2rem">
+					<Box
+						className={styles.boxanime}
+						boxShadow="lg"
+						rounded="md"
+						p="1rem 1.2rem"
+					>
 						<Image
 							src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
-							alt="Dataware"
-							// width="50%"
+							alt="airbnb"
 							rounded="md"
 						/>
+						<Flex className={styles.boxflex} justifyContent="space-evenly">
+							<Tooltip label="JavaScript" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									mr="1rem"
+									borderRadius="0.3rem"
+								>
+									<SiJavascript color="#F7DF1E" size="25px" />
+								</Box>
+							</Tooltip>
+
+							<Tooltip label="Reactjs" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									borderRadius="0.3rem"
+									mr="1rem"
+								>
+									<SiReact color="#61DAFB" size="25px" />
+								</Box>
+							</Tooltip>
+							<Tooltip label="JavaScript" placement="top" borderRadius="4">
+								<Box
+									bg={colorSelect}
+									p="0.5rem 0.7rem"
+									mr="1rem"
+									borderRadius="0.3rem"
+								>
+									<SiNextdotjs color="#000000" size="25px" />
+								</Box>
+							</Tooltip>
+						</Flex>
 					</Box>
 				</Flex>
 				<Link href="/works">

@@ -7,7 +7,7 @@ const Index = () => {
 		<>
 			<div className={styles.container}>
 				<Layout>
-					<Center mt="10rem">Wrong Pages</Center>
+					<Center mt="10rem">Wrong Page</Center>
 				</Layout>
 			</div>
 		</>
