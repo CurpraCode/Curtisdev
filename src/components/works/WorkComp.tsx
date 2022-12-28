@@ -1,6 +1,15 @@
 import React from "react";
-import { Box, Flex, Image, Tooltip, useColorMode } from "@chakra-ui/react";
+import {
+	Box,
+	Flex,
+	Image,
+	Tooltip,
+	useColorMode,
+	SimpleGrid,
+	Link,
+} from "@chakra-ui/react";
 import Footer from "../common/Footer";
+
 import {
 	SiHtml5,
 	SiCss3,
@@ -17,6 +26,143 @@ import {
 	SiNodedotjs,
 } from "react-icons/si";
 import styles from "../../styles/Home.module.css";
+
+const projects = [
+	{
+		title: "Dataware",
+		imgsrc: "https://curtisdev.netlify.app/static/media/dataware.d016f1cb.png",
+		url: "https://webzerve.vercel.app",
+		skills: [
+			{
+				techTitle: "HTML",
+				tech: SiHtml5,
+				color: "#E34F26",
+			},
+			{
+				techTitle: "CSS",
+				tech: SiCss3,
+				color: "#1572b6",
+			},
+			{
+				techTitle: "JavaScript",
+				tech: SiJavascript,
+				color: "#F7DF1E",
+			},
+		],
+	},
+	{
+		title: "Airbnb-Clone",
+		imgsrc: "https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png",
+		url: "https://weaverbuxx.com",
+		skills: [
+			{
+				techTitle: "JavaScript",
+				tech: SiJavascript,
+				color: "#F7DF1E",
+			},
+			{
+				techTitle: "Nextjs",
+				tech: SiNextdotjs,
+				color: "000000",
+			},
+			{
+				techTitle: "Reactjs",
+				tech: SiReact,
+				color: "#61DAFB",
+			},
+		],
+	},
+	{
+		title: "Webzerve",
+		imgsrc: "/webzerve.png",
+		url: "https://webzerve.vercel.app",
+		skills: [
+			{
+				techTitle: "TypeScript",
+				tech: SiTypescript,
+				color: "#3178C6",
+			},
+			{
+				techTitle: "Nextjs",
+				tech: SiNextdotjs,
+				color: "#000000",
+			},
+			{
+				techTitle: "Nestjs",
+				tech: SiNestjs,
+				color: "#E10098",
+			},
+		],
+	},
+	{
+		title: "Weaverbuxx",
+		imgsrc: "/weaverbuxx.png",
+		url: "https://weaverbuxx.com",
+		skills: [
+			{
+				techTitle: "JavaScript",
+				tech: SiJavascript,
+				color: "#F7DF1E",
+			},
+			{
+				techTitle: "React",
+				tech: SiReact,
+				color: "#61DAFB",
+			},
+			{
+				techTitle: "Nodejs",
+				tech: SiNodedotjs,
+				color: "#339933",
+			},
+		],
+	},
+	{
+		title: "MovieWebapp",
+		imgsrc: "https://curtisdev.netlify.app/static/media/cm.8ae40d90.png",
+		url: "https://weaverbuxx.com",
+		skills: [
+			{
+				techTitle: "JavaScript",
+				tech: SiJavascript,
+				color: "#F7DF1E",
+			},
+			{
+				techTitle: "React",
+				tech: SiReact,
+				color: "#61DAFB",
+			},
+			{
+				techTitle: "Nodejs",
+				tech: SiNodedotjs,
+				color: "#339933",
+			},
+		],
+	},
+
+	{
+		title: "Curtisdev",
+		imgsrc: "/curtiswebbg.png",
+		url: "https://curtisdev.com",
+		skills: [
+			{
+				techTitle: "TypeScript",
+				tech: SiTypescript,
+				color: "#3178C6",
+			},
+			{
+				techTitle: "Nextjs",
+				tech: SiNextdotjs,
+				color: "#000000",
+			},
+			{
+				techTitle: "Nodejs",
+				tech: SiNodedotjs,
+				color: "#339933",
+			},
+		],
+	},
+];
+
 const WorkComp = () => {
 	const { colorMode } = useColorMode();
 	const colorSelect = colorMode === "dark" ? "theme.100" : "theme.350";
@@ -25,308 +171,45 @@ const WorkComp = () => {
 			mt="6rem"
 			p={["0.1rem 0.3rem", "0.3rem 0.5rem", "1rem 2rem", "1rem 2rem"]}
 		>
-			<Flex flexDir={{ base: "column", lg: "row" }}>
-				<Box
-					className={styles.boxanime}
-					boxShadow="lg"
-					rounded="md"
-					p="1rem 1.2rem"
-					mr={{ base: "0", lg: "1rem" }}
-				>
-					<Image
-						src="https://curtisdev.netlify.app/static/media/dataware.d016f1cb.png"
-						alt="Dataware"
-						rounded="md"
-					/>
-					<Flex className={styles.boxflex} justifyContent="space-evenly">
-						<Tooltip label="HTML" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiHtml5 color="#E34F26" size="25px" />
-							</Box>
-						</Tooltip>
-						<Tooltip label="CSS" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiCss3 color="#1572B6" size="25px" />
-							</Box>
-						</Tooltip>
-
-						<Tooltip label="JavaScript" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiJavascript color="#F7DF1E" size="25px" />
-							</Box>
-						</Tooltip>
-					</Flex>
-				</Box>
-				<Box
-					boxShadow="lg"
-					rounded="md"
-					p="1rem 1.2rem"
-					mr={{ base: "0", lg: "1rem" }}
-					className={styles.boxanime}
-				>
-					<Image
-						src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
-						alt="Dataware"
-						rounded="md"
-					/>
-					<Flex className={styles.boxflex} justifyContent="space-evenly">
-						<Tooltip label="JavaScript" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiJavascript color="#F7DF1E" size="25px" />
-							</Box>
-						</Tooltip>
-
-						<Tooltip label="Reactjs" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								borderRadius="0.3rem"
-								mr="1rem"
-							>
-								<SiReact color="#61DAFB" size="25px" />
-							</Box>
-						</Tooltip>
-						<Tooltip label="JavaScript" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiNextdotjs color="#000000" size="25px" />
-							</Box>
-						</Tooltip>
-					</Flex>
-				</Box>
-
-				<Box
-					boxShadow="lg"
-					rounded="md"
-					p="1rem 1.2rem"
-					className={styles.boxanime}
-				>
-					<Image
-						src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
-						alt="airbnb"
-						rounded="md"
-					/>
-					<Flex className={styles.boxflex} justifyContent="space-evenly">
-						<Tooltip label="HTML" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiHtml5 color="#E34F26" size="25px" />
-							</Box>
-						</Tooltip>
-						<Tooltip label="CSS" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiCss3 color="#1572B6" size="25px" />
-							</Box>
-						</Tooltip>
-
-						<Tooltip label="JavaScript" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiJavascript color="#F7DF1E" size="25px" />
-							</Box>
-						</Tooltip>
-
-						<Tooltip label="Reactjs" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.5rem 0.7rem" borderRadius="0.3rem">
-								<SiReact color="#61DAFB" size="25px" />
-							</Box>
-						</Tooltip>
-					</Flex>
-				</Box>
-			</Flex>
-			<Flex flexDir={{ base: "column", lg: "row" }}>
-				<Box
-					boxShadow="lg"
-					rounded="md"
-					p="1rem 1.2rem"
-					mr={{ base: "0", lg: "1rem" }}
-					className={styles.boxanime}
-				>
-					<Image
-						src="https://curtisdev.netlify.app/static/media/dataware.d016f1cb.png"
-						alt="Dataware"
-						rounded="md"
-					/>
-					<Flex className={styles.boxflex} justifyContent="space-evenly">
-						<Tooltip label="HTML" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiHtml5 color="#E34F26" size="25px" />
-							</Box>
-						</Tooltip>
-						<Tooltip label="CSS" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiCss3 color="#1572B6" size="25px" />
-							</Box>
-						</Tooltip>
-
-						<Tooltip label="JavaScript" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiJavascript color="#F7DF1E" size="25px" />
-							</Box>
-						</Tooltip>
-
-						<Tooltip label="Reactjs" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.5rem 0.7rem" borderRadius="0.3rem">
-								<SiReact color="#61DAFB" size="25px" />
-							</Box>
-						</Tooltip>
-					</Flex>
-				</Box>
-				<Box
-					boxShadow="lg"
-					rounded="md"
-					p="1rem 1.2rem"
-					className={styles.boxanime}
-				>
-					<Image
-						src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
-						alt="airbnb"
-						rounded="md"
-					/>
-					<Flex className={styles.boxflex} justifyContent="space-evenly">
-						<Tooltip label="HTML" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiHtml5 color="#E34F26" size="25px" />
-							</Box>
-						</Tooltip>
-						<Tooltip label="CSS" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiCss3 color="#1572B6" size="25px" />
-							</Box>
-						</Tooltip>
-
-						<Tooltip label="JavaScript" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiJavascript color="#F7DF1E" size="25px" />
-							</Box>
-						</Tooltip>
-
-						<Tooltip label="Reactjs" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.5rem 0.7rem" borderRadius="0.3rem">
-								<SiReact color="#61DAFB" size="25px" />
-							</Box>
-						</Tooltip>
-					</Flex>
-				</Box>
-				<Box
-					boxShadow="lg"
-					rounded="md"
-					p="1rem 1.2rem"
-					className={styles.boxanime}
-				>
-					<Image
-						src="https://curtisdev.netlify.app/static/media/airbnb.f2fd8006.png"
-						alt="airbnb"
-						rounded="md"
-					/>
-					<Flex className={styles.boxflex} justifyContent="space-evenly">
-						<Tooltip label="HTML" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiHtml5 color="#E34F26" size="25px" />
-							</Box>
-						</Tooltip>
-						<Tooltip label="CSS" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiCss3 color="#1572B6" size="25px" />
-							</Box>
-						</Tooltip>
-
-						<Tooltip label="JavaScript" placement="top" borderRadius="4">
-							<Box
-								bg={colorSelect}
-								p="0.5rem 0.7rem"
-								mr="1rem"
-								borderRadius="0.3rem"
-							>
-								<SiJavascript color="#F7DF1E" size="25px" />
-							</Box>
-						</Tooltip>
-
-						<Tooltip label="Reactjs" placement="top" borderRadius="4">
-							<Box bg={colorSelect} p="0.5rem 0.7rem" borderRadius="0.3rem">
-								<SiReact color="#61DAFB" size="25px" />
-							</Box>
-						</Tooltip>
-					</Flex>
-				</Box>
-			</Flex>
+			<SimpleGrid columns={[1, 1, 2, 3, 3]} spacing="40px" pt="2rem" pb="4rem">
+				{projects.map((project) => {
+					return (
+						<Box
+							key={project.title}
+							className={styles.boxanime}
+							boxShadow="lg"
+							rounded="md"
+							p="1rem 1.2rem"
+							mr={{ base: "0", lg: "1rem" }}
+						>
+							<Link href={"works/" + project.title}>
+								<Image src={project.imgsrc} alt={project.title} rounded="md" />
+								<Flex className={styles.boxflex} justifyContent="space-evenly">
+									{project.skills.map((tool) => {
+										return (
+											<Tooltip
+												key={tool.color}
+												label={tool.techTitle}
+												placement="top"
+												borderRadius="4"
+											>
+												<Box
+													bg={colorSelect}
+													p="0.5rem 0.7rem"
+													mr="1rem"
+													borderRadius="0.3rem"
+												>
+													<tool.tech color={tool.color} size="25px" />
+												</Box>
+											</Tooltip>
+										);
+									})}
+								</Flex>
+							</Link>
+						</Box>
+					);
+				})}
+			</SimpleGrid>
 			<Footer />
 		</Box>
 	);
