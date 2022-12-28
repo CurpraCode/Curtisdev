@@ -3,8 +3,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: "Poppins", sans-serif;
-	/* background-color: #f6faff; */
+	font-family: Monsterrat, Roboto, Oxygen, Helvetica Neue, sans-serif;
 }
 
 a {

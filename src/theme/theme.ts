@@ -21,7 +21,11 @@ const colors = {
 		50: "#ffffff",
 	},
 };
+const fonts = {
+	heading: `'Open Sans', sans-serif`,
+	body: `'montserrat', sans-serif`,
+};
 // 3. extend the theme
-const theme = extendTheme({ colors, config });
+const theme = extendTheme({ colors, config, fonts });
 
 export default theme;

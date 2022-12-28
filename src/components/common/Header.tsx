@@ -21,9 +21,9 @@ import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Footer from "./Footer";
 
 const links = [
-	{ name: "Home", to: "/" },
 	{ name: "About Me", to: "/about" },
 	{ name: "Works", to: "/works" },
+	{ name: "Blog", to: "https://blog.curtisdev.com/" },
 	{ name: "Contact", to: "/contact" },
 ];
 
