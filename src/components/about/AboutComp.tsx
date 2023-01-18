@@ -58,7 +58,7 @@ const AboutComp = () => {
 				work on various projects.
 			</Text>
 			<Link
-				href="https://drive.google.com/file/d/1godtUoOT7siFRD1DmCYagmID6s4UNq7z/view?usp=sharing"
+				href="https://drive.google.com/file/d/1KdJVkBoe3bHk3ru--MwaeIjaZYRdCd18/view?usp=sharing"
 				isExternal
 			>
 				<Button
