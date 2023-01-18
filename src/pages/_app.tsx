@@ -109,6 +109,21 @@ function MyApp({ Component, pageProps }: Props): JSX.Element {
       })();
       `}
 									</Script>
+									<Script
+										id="snowify"
+										strategy="afterInteractive"
+										src="https://gauravkrp.com/snowify.min.js"
+									/>
+									<Script
+										id="snowify-init"
+										strategy="lazyOnload"
+										dangerouslySetInnerHTML={{
+											__html: `initSnowify({
+      snowColor: 'offWhite',
+      snowCount: 120,
+      });`,
+										}}
+									/>
 								</>
 							)}
 						</>
