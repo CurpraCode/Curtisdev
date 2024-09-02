@@ -27,26 +27,27 @@ function MyApp({ Component, pageProps }: Props): JSX.Element {
 	useEffect(() => {
 		setPageLoad(false);
 	}, []);
-	useEffect(() => {
-		const handleStart = (url: any) => {
-			if (window.Tawk_API) {
-				window.Tawk_API.hideWidget();
-			}
-			return url !== router.asPath && setLoading(true);
-		};
-		const handleComplete = (url: any) => {
-			window.Tawk_API.showWidget();
-			setLoading(false);
-		};
-		router.events.on("routeChangeStart", handleStart);
-		router.events.on("routeChangeComplete", handleComplete);
-		router.events.on("routeChangeError", handleComplete);
-		return () => {
-			router.events.off("routeChangeStart", handleStart);
-			router.events.off("routeChangeComplete", handleComplete);
-			router.events.off("routeChangeError", handleComplete);
-		};
-	}, [router.events, router.asPath]);
+
+	// useEffect(() => {
+	// 	const handleStart = (url: any) => {
+	// 		if (window.Tawk_API) {
+	// 			window.Tawk_API.hideWidget();
+	// 		}
+	// 		return url !== router.asPath && setLoading(true);
+	// 	};
+	// 	const handleComplete = (url: any) => {
+	// 		window.Tawk_API.showWidget();
+	// 		setLoading(false);
+	// 	};
+	// 	router.events.on("routeChangeStart", handleStart);
+	// 	router.events.on("routeChangeComplete", handleComplete);
+	// 	router.events.on("routeChangeError", handleComplete);
+	// 	return () => {
+	// 		router.events.off("routeChangeStart", handleStart);
+	// 		router.events.off("routeChangeComplete", handleComplete);
+	// 		router.events.off("routeChangeError", handleComplete);
+	// 	};
+	// }, [router.events, router.asPath]);
 	return (
 		<ChakraProvider theme={theme} resetCSS>
 			<AnimateSharedLayout>
@@ -96,7 +97,7 @@ function MyApp({ Component, pageProps }: Props): JSX.Element {
 									</Head>
 									<Component {...pageProps} />
 									<AnimatedCursor />
-									<Script id="tawk" strategy="lazyOnload">
+									{/* <Script id="tawk" strategy="lazyOnload">
 										{`
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
       (function(){
@@ -108,7 +109,7 @@ function MyApp({ Component, pageProps }: Props): JSX.Element {
       s0.parentNode.insertBefore(s1,s0);
       })();
       `}
-									</Script>
+									</Script> */}
 									<Script
 										id="snowify"
 										strategy="afterInteractive"
