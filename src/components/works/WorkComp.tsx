@@ -24,6 +24,7 @@ import {
   SiGithub,
   SiExpo,
   SiNodedotjs,
+  SiAngular,
 } from "react-icons/si";
 import styles from "../../styles/Home.module.css";
 
@@ -95,19 +96,19 @@ const projects = [
     ],
   },
   {
-    title: "Weaverbuxx",
+    title: "Specta Credit card",
     imgsrc: "/spectacreditcard.png",
-    url: "https://weaverbuxx.com",
+    url: "https://spectaultracreditcard.sterling.ng/",
     skills: [
       {
-        techTitle: "JavaScript",
-        tech: SiJavascript,
-        color: "#F7DF1E",
+        techTitle: "TypeScript",
+        tech: SiTypescript,
+        color: "#3178C6",
       },
       {
-        techTitle: "React",
-        tech: SiReact,
-        color: "#61DAFB",
+        techTitle: "Angular",
+        tech: SiAngular,
+        color: "#F7DF1E",
       },
       {
         techTitle: "Nodejs",
@@ -119,7 +120,7 @@ const projects = [
   {
     title: "MovieWebapp",
     imgsrc: "https://curtisdev.netlify.app/static/media/cm.8ae40d90.png",
-    url: "https://weaverbuxx.com",
+    url: "https://movie-webapp.vercel.app/home",
     skills: [
       {
         techTitle: "JavaScript",
@@ -185,11 +186,6 @@ const projects = [
         techTitle: "Nextjs",
         tech: SiNextdotjs,
         color: "#000000",
-      },
-      {
-        techTitle: "Nodejs",
-        tech: SiNodedotjs,
-        color: "#339933",
       },
     ],
   },
